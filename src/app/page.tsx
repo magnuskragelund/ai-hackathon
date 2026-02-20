@@ -4,10 +4,10 @@ import Link from 'next/link';
 const cases = [
   {
     id: 'CASE_001',
-    title: 'AI-drevne udviklerværktøjer',
+    title: 'Konference Check-in',
     difficulty: 'SVÆR' as const,
-    description: 'Byg en intelligent kodeassistent, der forstår kontekst og giver forslag i realtid.',
-    tech: ['Python', 'TensorFlow', 'React'],
+    description: 'Brug jeres AI-kodningsværktøj til at vibe-code en check-in-app til konferencer — med live API og realistisk testdata.',
+    tech: ['REST API', 'AI-kodning', 'Valgfrit framework'],
     link: '/case/1'
   },
   {
