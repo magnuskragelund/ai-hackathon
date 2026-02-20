@@ -21,10 +21,15 @@ const cases = [
 ];
 
 const sideQuests = [
-  { task: 'Deploy din løsning til produktion', tag: '[ANBEFALET]', icon: '🚀' },
-  { task: 'Implementér testdækning (>80%)', tag: '[DEEP DIVE]', icon: '✅' },
-  { task: 'Lav API-dokumentation', tag: '[SOLID MOVE]', icon: '📚' },
-  { task: 'Tilføj dark/light mode toggle', tag: '[QUICK WIN]', icon: '🌓' },
+  { task: 'Forbind til en MCP-server', tag: '[ANBEFALET]', icon: '🔌', link: '/quest/mcp-server' },
+  { task: 'CLAUDE.md som Team-Kontrakt', tag: '[ANBEFALET]', icon: '📜', link: '/quest/claude-md' },
+  { task: 'Byg jeres egne Skills', tag: '[DEEP DIVE]', icon: '⚡', link: '/quest/skills' },
+  { task: 'Byg et Custom Agent', tag: '[DEEP DIVE]', icon: '🤖', link: '/quest/custom-agent' },
+  { task: 'Sæt Hooks op', tag: '[SOLID MOVE]', icon: '🪝', link: '/quest/hooks' },
+  { task: 'Kør Claude Code Headless', tag: '[SOLID MOVE]', icon: '🖥️', link: '/quest/headless' },
+  { task: 'Screenshot-Driven Development', tag: '[KREATIV]', icon: '📸', link: '/quest/screenshot-driven' },
+  { task: 'Tilgængelighed (WCAG 2.1 AA)', tag: '[QUICK WIN]', icon: '♿', link: '/quest/tilgaengelighed' },
+  { task: 'Wildcard — Kombinér det hele', tag: '[LEGENDARY]', icon: '🃏', link: '/quest/wildcard' },
 ];
 
 const nonDevQuests = [
@@ -187,16 +192,18 @@ export default function Home() {
             <p className="text-[#8b949e] text-sm mb-4">Ekstra tekniske udfordringer for dem der vil gå all in.</p>
             <div className="space-y-3">
               {sideQuests.map((quest, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-center justify-between border border-[#30363d] bg-[#161b22] p-3 hover:border-[#7ee787] transition-colors"
-                >
-                  <div className="flex items-center gap-3">
-                    <span className="text-xl">{quest.icon}</span>
-                    <span className="text-[#c9d1d9] text-sm">{quest.task}</span>
+                <Link key={idx} href={quest.link} className="block">
+                  <div className="flex items-center justify-between border border-[#30363d] bg-[#161b22] p-3 hover:border-[#7ee787] transition-colors">
+                    <div className="flex items-center gap-3">
+                      <span className="text-xl">{quest.icon}</span>
+                      <span className="text-[#c9d1d9] text-sm">{quest.task}</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-[#7ee787] text-sm">{quest.tag}</span>
+                      <ChevronRight className="w-4 h-4 text-[#8b949e]" />
+                    </div>
                   </div>
-                  <span className="text-[#7ee787] text-sm">{quest.tag}</span>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
