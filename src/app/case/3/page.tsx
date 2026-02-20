@@ -64,7 +64,7 @@ export default function NpsCaseDetail() {
             <span>Tilbage til forsiden</span>
           </Link>
           <div className="flex items-center gap-3">
-            <span className="text-[#f85149] text-sm">[CASE_003]</span>
+            <span className="text-[#f85149] text-sm">[CASE_002]</span>
             <h1 className="text-xl text-[#c9d1d9]">NPS Web App til Medlemsfeedback</h1>
             <span className="text-xs px-2 py-1 border border-[#f85149] text-[#f85149]">SVÆR</span>
           </div>

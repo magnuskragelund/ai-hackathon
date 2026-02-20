@@ -11,7 +11,7 @@ const cases = [
     link: '/case/1'
   },
   {
-    id: 'CASE_003',
+    id: 'CASE_002',
     title: 'NPS Web App til Medlemsfeedback',
     difficulty: 'SVÆR' as const,
     description: 'Forvandl rå NPS-data fra ~7.900 medlemsbesvarelser til et interaktivt analyseværktøj med AI-drevet sentimentanalyse og trendidentifikation.',
