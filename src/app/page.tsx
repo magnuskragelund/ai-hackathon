@@ -18,6 +18,14 @@ const cases = [
     tech: ['Node.js', 'D3.js', 'PostgreSQL'],
     link: '#'
   },
+  {
+    id: 'CASE_003',
+    title: 'NPS Web App til Medlemsfeedback',
+    difficulty: 'SVÆR' as const,
+    description: 'Forvandl rå NPS-data fra ~7.900 medlemsbesvarelser til et interaktivt analyseværktøj med AI-drevet sentimentanalyse og trendidentifikation.',
+    tech: ['Claude API', 'Data visualisering', 'CSV/JSON'],
+    link: '/case/3'
+  },
 ];
 
 const sideQuests = [
