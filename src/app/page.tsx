@@ -11,14 +11,6 @@ const cases = [
     link: '/case/1'
   },
   {
-    id: 'CASE_002',
-    title: 'Bæredygtigt by-dashboard',
-    difficulty: 'MIDDEL' as const,
-    description: 'Lav et realtids-dashboard til at tracke CO2-udledning og bæredygtighedsmålinger.',
-    tech: ['Node.js', 'D3.js', 'PostgreSQL'],
-    link: '#'
-  },
-  {
     id: 'CASE_003',
     title: 'NPS Web App til Medlemsfeedback',
     difficulty: 'SVÆR' as const,
