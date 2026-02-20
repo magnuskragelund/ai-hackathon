@@ -28,10 +28,10 @@ const sideQuests = [
 ];
 
 const nonDevQuests = [
-  { task: 'Lav en 2-minutters pitch-video', tag: '[ANBEFALET]', icon: '🎬' },
-  { task: 'Design et logo til jeres projekt', tag: '[FUN]', icon: '🎨' },
-  { task: 'Skriv et blogindlæg om jeres proces', tag: '[DEEP DIVE]', icon: '✍️' },
-  { task: 'Tag det bedste hold-selfie', tag: '[LEGENDARY]', icon: '📸' },
+  { task: 'UX & Design', tag: '[KREATIV]', icon: '🎨', link: '/quest/ux-design' },
+  { task: 'Produkt & PO', tag: '[STRATEGISK]', icon: '🎯', link: '/quest/produkt-po' },
+  { task: 'Ledelse & Forretning', tag: '[BUSINESS]', icon: '💼', link: '/quest/ledelse-forretning' },
+  { task: 'Drift & Ops', tag: '[DEEP DIVE]', icon: '🔧', link: '/quest/drift-ops' },
 ];
 
 const schedule = {
@@ -215,16 +215,18 @@ export default function Home() {
             <p className="text-[#8b949e] text-sm mb-4">Ikke alt handler om kode - vis jeres kreative side!</p>
             <div className="space-y-3">
               {nonDevQuests.map((quest, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-center justify-between border border-[#30363d] bg-[#161b22] p-3 hover:border-[#a371f7] transition-colors"
-                >
-                  <div className="flex items-center gap-3">
-                    <span className="text-xl">{quest.icon}</span>
-                    <span className="text-[#c9d1d9] text-sm">{quest.task}</span>
+                <Link key={idx} href={quest.link} className="block">
+                  <div className="flex items-center justify-between border border-[#30363d] bg-[#161b22] p-3 hover:border-[#a371f7] transition-colors">
+                    <div className="flex items-center gap-3">
+                      <span className="text-xl">{quest.icon}</span>
+                      <span className="text-[#c9d1d9] text-sm">{quest.task}</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-[#a371f7] text-sm">{quest.tag}</span>
+                      <ChevronRight className="w-4 h-4 text-[#8b949e]" />
+                    </div>
                   </div>
-                  <span className="text-[#a371f7] text-sm">{quest.tag}</span>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
