@@ -43,22 +43,22 @@ const schedule = {
   daytime: {
     title: 'DAGSPROGRAM',
     events: [
-      { time: '08:30', event: 'Ankomst & morgenmad', status: 'opening' },
-      { time: '09:00', event: 'Velkomst & intro til dagens udfordringer', status: 'important' },
-      { time: '09:30', event: 'Holddannelse & hacking begynder! 🎯', status: 'start' },
-      { time: '12:00', event: 'Frokost', status: 'normal' },
-      { time: '12:30', event: 'Hacking fortsætter', status: 'normal' },
-      { time: '15:00', event: 'Deadline for aflevering! ⏰', status: 'deadline' },
-      { time: '15:30', event: 'Projektpræsentationer', status: 'important' },
-      { time: '16:30', event: 'Bedømmelse & prisoverrækkelse', status: 'closing' },
+      { time: '09:15', event: 'Velkomst & Context-Setting', status: 'opening' },
+      { time: '09:25', event: 'Show and tell: "Fra ur til applikation"', status: 'normal' },
+      { time: '10:00', event: 'Grupper & casepræsentation', status: 'important' },
+      { time: '10:20', event: 'Pause ☕', status: 'normal' },
+      { time: '10:30', event: 'Hackathon-session starter! 🎯', status: 'start' },
+      { time: '15:30', event: 'Deadline & præsentationer ⏰', status: 'deadline' },
+      { time: '16:30', event: 'Energizer & afrunding', status: 'normal' },
+      { time: '16:45', event: 'Praktisk afslutning', status: 'closing' },
     ]
   },
   evening: {
     title: 'AFTENPROGRAM',
     events: [
-      { time: '17:00', event: 'Drinks & networking', status: 'normal' },
-      { time: '18:00', event: 'Fælles middag', status: 'normal' },
-      { time: '19:00', event: 'Fri bar & fest 🎉', status: 'start' },
+      { time: '17:00', event: 'After ski — snacks & drinks i DUBAI-afsnittet', status: 'normal' },
+      { time: '17:50', event: 'Afgang mod restaurant', status: 'normal' },
+      { time: '18:30', event: 'Middag på Bistro Royal 🍽️', status: 'start' },
     ]
   }
 };
