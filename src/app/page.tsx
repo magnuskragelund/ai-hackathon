@@ -131,6 +131,12 @@ export default function Home() {
                 },
                 {
                   num: '04',
+                  text: 'Aftal frokost med jeres gruppe',
+                  code: '# I bestemmer selv hvornår I spiser — bestil et tidspunkt i kantinen og koordinér med jeres makker.',
+                  codeColor: 'text-[#8b949e]',
+                },
+                {
+                  num: '05',
                   text: 'Byg, iterér og hav det sjovt',
                   code: '# I dag handler det ikke om perfekt kode. Det handler om at lære, eksperimentere og se hvad AI kan.',
                   codeColor: 'text-[#8b949e]',
