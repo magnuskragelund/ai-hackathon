@@ -30,45 +30,47 @@ export default function CaseDetail() {
 
           <div className="space-y-4 leading-relaxed">
             <p className="text-[#c9d1d9]">
-              Når der afholdes konferencer, skal deltagere tjekkes ind, finde rundt i programmet
-              og vælge de rette sessions. Værtene for konferencen skal kunne se hvem der er tilmeldt,
-              registrere ankomne og sælge billetter i døren.
+              Forestil dig, at du skal bygge værktøjer, der understøtter afviklingen af en konference.
+              Deltagere skal tjekkes ind, finde rundt i programmet og vælge de rette sessions.
+              Værten skal kunne se hvem der er tilmeldt, følge med i ankomster og håndtere
+              billetter i døren. Der er masser at bygge — spørgsmålet er, hvad I vælger at løse.
             </p>
 
             <div className="border-l-2 border-[#58a6ff] pl-4 py-2 bg-[#161b22] my-6">
               <p className="text-[#8b949e] text-sm mb-1">JERES MISSION</p>
               <p className="text-[#c9d1d9]">
-                Brug jeres AI-kodningsværktøj til at vibe-code en applikation, der gør
-                konferenceoplevelsen bedre &mdash; enten for <strong className="text-[#7ee787]">deltagerne</strong>,
-                for <strong className="text-[#7ee787]">konferenceholdet</strong>, eller begge dele.
-                I bygger oven på et færdigt backend-API med realistisk testdata.
+                Brug jeres AI-kodningsværktøj til at vibe-code noget, der gør konferenceoplevelsen
+                bedre &mdash; helt fra bunden. I vælger selv formatet: et website, en app, eller
+                noget helt tredje. I vælger selv vinklen: støt{' '}
+                <strong className="text-[#7ee787]">deltagerne</strong>, støt{' '}
+                <strong className="text-[#7ee787]">værten</strong>, eller find på noget eget.
               </p>
             </div>
           </div>
         </section>
 
-        {/* API-fundament */}
+        {/* Data og kontekst */}
         <section className="mb-10">
           <div className="mb-4">
             <h2 className="text-[#58a6ff] text-lg mb-2">
-              <span className="text-[#8b949e]">~/</span>api-fundament
+              <span className="text-[#8b949e]">~/</span>data-og-kontekst
             </h2>
             <div className="h-px bg-[#30363d]"></div>
           </div>
 
           <div className="space-y-4 leading-relaxed">
             <p className="text-[#c9d1d9]">
-              I stedet for et datasæt får I adgang til et <strong className="text-[#7ee787]">live REST API</strong> med
-              fuld dokumentation. API&apos;et håndterer konferencer, billetter, gæster og check-ins &mdash; og
-              er klar til brug med realistisk seed-data (~600 billetter fordelt på 3 konferencer).
+              I arbejder ikke med en tom skærm. Der er et live datasæt klar med realistiske data
+              fra tre fiktive konferencer &mdash; billetter, gæster, check-ins, talks og evalueringer.
+              I kan trække data ud, vise dem, reagere på dem og skrive tilbage til dem.
             </p>
 
             <div className="border border-[#30363d] bg-[#161b22] overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-[#30363d]">
-                    <th className="text-left p-3 text-[#58a6ff]">Ressource</th>
-                    <th className="text-left p-3 text-[#58a6ff]">Beskrivelse</th>
+                    <th className="text-left p-3 text-[#58a6ff]">Hvad er der data om</th>
+                    <th className="text-left p-3 text-[#58a6ff]">Hvad indeholder det</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -80,7 +82,7 @@ export default function CaseDetail() {
                     { res: 'Extras', desc: 'Tilkøb som Dinner Party og Snack Buffet på billetterne' },
                     { res: 'Talks', desc: '10-15 talks pr. konference med speaker, track, tidspunkt og rum' },
                     { res: 'Evalueringer', desc: 'Deltager-ratings (1-5) og kommentarer på de enkelte talks' },
-                    { res: 'Statistik', desc: 'Endpoints til realtidsstatistik, check-in-rater og evalueringsoversigter' },
+                    { res: 'Statistik', desc: 'Realtidsstatistik, check-in-rater og evalueringsoversigter' },
                   ].map((row, idx) => (
                     <tr key={idx} className="border-b border-[#30363d] last:border-0">
                       <td className="p-3 text-[#7ee787]">{row.res}</td>
@@ -91,27 +93,119 @@ export default function CaseDetail() {
               </table>
             </div>
 
-            <div className="space-y-2 text-sm">
-              <p className="text-[#c9d1d9]">Kom i gang:</p>
-              <div className="space-y-1">
-                <code className="block bg-[#161b22] border border-[#30363d] p-3 text-[#58a6ff] text-sm">
-                  Swagger UI: &lt;base-url&gt;/api/v1/docs
-                </code>
-                <code className="block bg-[#161b22] border border-[#30363d] p-3 text-[#58a6ff] text-sm">
-                  OpenAPI-spec: &lt;base-url&gt;/api/v1/openapi.json
-                </code>
-              </div>
-              <p className="text-[#8b949e]">API-nøgler og base-URL udleveres ved hackathonens start.</p>
-            </div>
+            <p className="text-[#8b949e] text-sm">
+              Adgang til datasættet udleveres ved hackathonets start.
+            </p>
+          </div>
+        </section>
 
-            <div className="border border-[#d29922] bg-[#161b22] p-4">
-              <p className="text-[#d29922] text-sm">
-                <span className="mr-2">💡</span>
-                <strong>Tip:</strong> Giv jeres AI-værktøj adgang til OpenAPI-specifikationen, så det kan
-                forstå API&apos;et og generere integrationskode automatisk. Prøv fx: <em>&quot;Hent
-                OpenAPI-specifikationen fra dette URL og byg en service-klasse, der wrapper alle endpoints.&quot;</em>
-              </p>
-            </div>
+        {/* Sådan kommer I i gang */}
+        <section className="mb-10">
+          <div className="mb-4">
+            <h2 className="text-[#58a6ff] text-lg mb-2">
+              <span className="text-[#8b949e]">~/</span>sådan-kommer-i-i-gang
+            </h2>
+            <div className="h-px bg-[#30363d]"></div>
+          </div>
+
+          <p className="text-[#c9d1d9] mb-4 leading-relaxed">
+            Der er ikke én rigtig måde at angribe denne case på. Fold den tilgang ud, der passer til dig.
+          </p>
+
+          <div className="space-y-3">
+            {/* Dev accordion */}
+            <details className="border border-[#30363d] bg-[#161b22] group">
+              <summary className="p-4 cursor-pointer flex items-center justify-between list-none hover:bg-[#1c2128]">
+                <div className="flex items-center gap-3">
+                  <span className="text-[#7ee787] text-sm">[DEV]</span>
+                  <span className="text-[#c9d1d9]">Udviklere — Byg med din AI-kodningsagent</span>
+                </div>
+                <span className="text-[#8b949e] text-sm group-open:hidden">+ fold ud</span>
+                <span className="text-[#8b949e] text-sm hidden group-open:inline">− fold ind</span>
+              </summary>
+              <div className="px-4 pb-4 pt-2 border-t border-[#30363d] space-y-3">
+                <p className="text-[#8b949e] text-sm leading-relaxed">
+                  Brug Claude Code eller et tilsvarende AI-kodningsværktøj som din primære samarbejdspartner
+                  — ikke bare til at generere kode, men til at drive hele processen fremad.
+                </p>
+                <ul className="space-y-2">
+                  {[
+                    { label: 'Byg applikationen', desc: 'Lad agenten skrive selve koden. Beskriv hvad du vil opnå, ikke hvordan.' },
+                    { label: 'Generér test-cases', desc: 'Bed agenten om at skrive tests løbende, så I ved hvornår noget virker.' },
+                    { label: 'Lav dokumentation', desc: 'Agenten kan dokumentere kode og flows, mens I bygger.' },
+                    { label: 'Integrer mod datasættet', desc: 'Giv agenten adgang til API-specifikationen, og lad den generere integrationen automatisk.' },
+                  ].map((item, idx) => (
+                    <li key={idx} className="text-sm">
+                      <span className="text-[#7ee787]">{item.label}:</span>{' '}
+                      <span className="text-[#8b949e]">{item.desc}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="border border-[#d29922] bg-[#0d1117] p-3 mt-2">
+                  <p className="text-[#d29922] text-sm">
+                    <strong>Tip:</strong> Prøv fx:{' '}
+                    <em>&quot;Hent OpenAPI-specifikationen fra dette URL og byg en service-klasse, der wrapper alle endpoints.&quot;</em>
+                  </p>
+                  <div className="mt-2 space-y-1">
+                    <code className="block bg-[#161b22] border border-[#30363d] p-2 text-[#58a6ff] text-xs">
+                      Swagger UI: &lt;base-url&gt;/api/v1/docs
+                    </code>
+                    <code className="block bg-[#161b22] border border-[#30363d] p-2 text-[#58a6ff] text-xs">
+                      OpenAPI-spec: &lt;base-url&gt;/api/v1/openapi.json
+                    </code>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+            {/* Non-dev accordion */}
+            <details className="border border-[#30363d] bg-[#161b22] group">
+              <summary className="p-4 cursor-pointer flex items-center justify-between list-none hover:bg-[#1c2128]">
+                <div className="flex items-center gap-3">
+                  <span className="text-[#a371f7] text-sm">[NON-DEV]</span>
+                  <span className="text-[#c9d1d9]">Ikke-udviklere — Research, design og prototyper</span>
+                </div>
+                <span className="text-[#8b949e] text-sm group-open:hidden">+ fold ud</span>
+                <span className="text-[#8b949e] text-sm hidden group-open:inline">− fold ind</span>
+              </summary>
+              <div className="px-4 pb-4 pt-2 border-t border-[#30363d] space-y-3">
+                <p className="text-[#8b949e] text-sm leading-relaxed">
+                  Du behøver ikke skrive kode for at bidrage meningsfuldt. Her er tre veje ind:
+                </p>
+                <ul className="space-y-3">
+                  <li className="text-sm">
+                    <a
+                      href="https://support.claude.com/en/articles/13345190-getting-started-with-cowork"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#a371f7] hover:text-[#c195fa]"
+                    >
+                      Claude Cowork
+                    </a>
+                    <span className="text-[#8b949e]"> — Samarbejd i realtid med Claude om research, analyse og idéudvikling. Del skærm, stil spørgsmål, iterér på koncepter.</span>
+                  </li>
+                  <li className="text-sm">
+                    <a
+                      href="https://support.claude.com/en/articles/9517075-what-are-projects"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#a371f7] hover:text-[#c195fa]"
+                    >
+                      Claude Projects
+                    </a>
+                    <span className="text-[#8b949e]"> — Byg et projekt op med kontekst, instruktioner og filer, som Claude altid har adgang til. Godt til at holde tråden i en længere arbejdsproces.</span>
+                  </li>
+                  <li className="text-sm">
+                    <span className="text-[#a371f7]">Figma Make</span>
+                    <span className="text-[#8b949e]"> — Generér prototyper og frontend-design direkte fra en prompt. Skitser en idé, beskriv den, og lad AI&apos;en oversætte det til et visuelt udkast.</span>
+                  </li>
+                </ul>
+                <p className="text-[#8b949e] text-sm mt-2">
+                  Tegn på papir eller whiteboard. Tag et billede og brug det som input til Figma Make eller Claude.
+                  I styrer retningen — AI&apos;en udfører det.
+                </p>
+              </div>
+            </details>
           </div>
         </section>
 
@@ -126,11 +220,11 @@ export default function CaseDetail() {
 
           <div className="space-y-4 leading-relaxed">
             <p className="text-[#c9d1d9]">
-              Byg en fungerende applikation med jeres AI-kodningsværktøj, der indeholder:
+              I del 1 er opgaven den samme for alle: byg en løsning, der dækker check-in-oplevelsen.
             </p>
 
             <div className="border border-[#30363d] bg-[#161b22] p-4">
-              <h3 className="text-[#d29922] mb-3">Deltager Check-in</h3>
+              <h3 className="text-[#d29922] mb-3">Check-in</h3>
               <ul className="space-y-2">
                 {[
                   'En check-in-oplevelse, hvor en deltager kan blive tjekket ind — fx via billetnummer, søgning på navn, eller scanning af QR-kode',
@@ -143,32 +237,6 @@ export default function CaseDetail() {
                   </li>
                 ))}
               </ul>
-            </div>
-
-            <div className="border border-[#a371f7] bg-[#161b22] p-4">
-              <h3 className="text-[#a371f7] mb-3">Til designere, UX&apos;ere, PO&apos;er og BI&apos;ere</h3>
-              <p className="text-[#8b949e] text-sm mb-3">
-                AI-kodningsværktøjer kan generere UI og datavisualiseringer hurtigt, men det
-                kræver mennesker at gøre det rigtig godt. Tænk over:
-              </p>
-              <ul className="space-y-2">
-                {[
-                  { label: 'Brugerrejsen', desc: 'En deltager vil noget andet end en medarbejder ved check-in-skranken — og noget helt tredje end en konferenceleder. Hvem bygger I til?' },
-                  { label: 'Hastighed og flow', desc: 'Check-in skal gå hurtigt. Hvordan minimerer I klik og ventetid?' },
-                  { label: 'Informationsarkitektur', desc: 'Hvad skal brugeren se først? Hvad er vigtigst — og hvad kan gemmes bag et klik?' },
-                  { label: 'Fejlhåndtering', desc: 'Hvad sker der, når noget går galt? Hvordan kommunikerer I tydeligt til brugeren?' },
-                ].map((item, idx) => (
-                  <li key={idx} className="text-sm">
-                    <span className="text-[#a371f7]">{item.label}:</span>{' '}
-                    <span className="text-[#8b949e]">{item.desc}</span>
-                  </li>
-                ))}
-              </ul>
-              <p className="text-[#8b949e] text-sm mt-3">
-                Skitser på papir eller whiteboard først. Tag et billede af jeres skitse og vis
-                det til jeres AI-værktøj — beskriv hvad I ønsker, og iterér derfra.
-                I styrer retningen, AI&apos;en bygger det.
-              </p>
             </div>
           </div>
         </section>
