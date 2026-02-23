@@ -83,58 +83,62 @@ export default function NpsCaseDetail() {
 
           <div className="space-y-4 leading-relaxed">
             <p className="text-[#c9d1d9]">
-              IDA indsamler NPS-data (Net Promoter Score) fra medlemmer — både som en{' '}
-              <strong className="text-[#7ee787]">numerisk score (0–10)</strong> og som{' '}
-              <strong className="text-[#7ee787]">fritekstbesvarelser</strong> på spørgsmålet{' '}
-              <em>"Vil du anbefale IDA?"</em> på dansk og engelsk.
+              Forestil dig, at du skal gøre IDAs NPS-data brugbar for rigtige mennesker.
+              IDA indsamler hvert år tusindvis af besvarelser fra medlemmer &mdash; både en{' '}
+              <strong className="text-[#7ee787]">numerisk score (0–10)</strong> og{' '}
+              <strong className="text-[#7ee787]">fritekstkommentarer</strong> om, hvorfor de
+              anbefaler (eller ikke anbefaler) IDA. Dataen eksisterer. Indsigterne er der.
+              Men de er begravede i et regneark.
             </p>
             <p className="text-[#c9d1d9]">
-              Den numeriske NPS-score er en del af IDAs strategiske mål, hvor vi desværre har set et fald
-              fra 2024 til 2025. Tekstbesvarelserne bliver i dag kun brugt i begrænset omfang, og vi har
-              endnu ikke udfoldet de trends, indsigter og mønstre, som medlemmerne faktisk fortæller os.
+              NPS-scoren er en del af IDAs strategiske mål, og vi har set et fald fra 2024 til 2025.
+              Tekstbesvarelserne bliver i dag kun brugt i begrænset omfang &mdash; de mønstre og
+              signaler, som medlemmerne faktisk sender, er endnu ikke udfoldede.
             </p>
 
             <div className="border-l-2 border-[#58a6ff] pl-4 py-2 bg-[#161b22] my-6">
               <p className="text-[#8b949e] text-sm mb-1">JERES MISSION</p>
               <p className="text-[#c9d1d9]">
-                Brug Claude Code til at bygge en webapplikation, der forvandler rå NPS-data til et
-                interaktivt og indsigtsfuldt værktøj — så medarbejdere, ledere og direktion i IDA kan
-                følge medlemmernes besvarelser, spotte mønstre og dykke ned i det, der er relevant for
-                netop deres forretningsområde.
+                Brug jeres AI-værktøj til at gøre NPS-dataen levende &mdash; fra rå tal og tekstsvar
+                til indsigter, der faktisk kan bruges. I vælger selv formatet: et dashboard, en
+                analyse, en visualisering eller noget helt tredje. I vælger selv vinklen: hvem skal
+                have mest gavn af det I bygger?{' '}
+                <strong className="text-[#7ee787]">Medarbejdere</strong>,{' '}
+                <strong className="text-[#7ee787]">ledere</strong>, eller find på noget eget.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Data */}
+        {/* Data og kontekst */}
         <section className="mb-10">
           <div className="mb-4">
             <h2 className="text-[#58a6ff] text-lg mb-2">
-              <span className="text-[#8b949e]">~/</span>data
+              <span className="text-[#8b949e]">~/</span>data-og-kontekst
             </h2>
             <div className="h-px bg-[#30363d]"></div>
           </div>
 
           <p className="text-[#c9d1d9] mb-4">
-            I modtager et anonymiseret datasæt med ca. <strong className="text-[#7ee787]">7.900 besvarelser</strong>{' '}
-            fordelt over 2024 og 2025 i CSV-format.
+            I modtager et anonymiseret datasæt med ca.{' '}
+            <strong className="text-[#7ee787]">7.900 besvarelser</strong> fordelt over 2024 og 2025.
+            Her er hvad der er data om:
           </p>
 
           <div className="border border-[#30363d] bg-[#161b22] overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-[#30363d]">
-                  <th className="text-left p-3 text-[#58a6ff]">Datafelt</th>
-                  <th className="text-left p-3 text-[#58a6ff]">Beskrivelse</th>
+                  <th className="text-left p-3 text-[#58a6ff]">Hvad er der data om</th>
+                  <th className="text-left p-3 text-[#58a6ff]">Hvad indeholder det</th>
                 </tr>
               </thead>
               <tbody>
                 {[
-                  { field: 'År', desc: 'Besvarelsens år (2024–2025)' },
-                  { field: 'Kvartal', desc: 'Kvartal (Q1–Q4)' },
-                  { field: 'Åbne besvarelser', desc: 'Fritekstsvar fra medlemmet — her gemmer de vigtigste indsigter sig' },
-                  { field: 'NPS Score', desc: 'Score fra 0–10' },
-                  { field: 'Sprog', desc: 'Besvarelsens sprog (dansk/engelsk)' },
+                  { field: 'NPS Score', desc: 'Medlemmets score fra 0–10' },
+                  { field: 'Fritekstbesvarelse', desc: 'Medlemmets egne ord — her gemmer de vigtigste indsigter sig' },
+                  { field: 'År & kvartal', desc: '2024–2025, opdelt pr. kvartal' },
+                  { field: 'Sprog', desc: 'Dansk eller engelsk' },
                   { field: 'Land', desc: 'Medlemmets bopælsland' },
                   { field: 'Stamdata', desc: 'Kreds/region, beskæftigelse og alder' },
                 ].map((row, idx) => (
@@ -145,6 +149,99 @@ export default function NpsCaseDetail() {
                 ))}
               </tbody>
             </table>
+          </div>
+
+          <p className="text-[#8b949e] text-sm mt-3">
+            Datasættet udleveres ved hackathonets start.
+          </p>
+        </section>
+
+        {/* Sådan kommer I i gang */}
+        <section className="mb-10">
+          <div className="mb-4">
+            <h2 className="text-[#58a6ff] text-lg mb-2">
+              <span className="text-[#8b949e]">~/</span>sådan-kommer-i-i-gang
+            </h2>
+            <div className="h-px bg-[#30363d]"></div>
+          </div>
+
+          <p className="text-[#c9d1d9] mb-4 leading-relaxed">
+            Der er ikke én rigtig måde at angribe denne case på. Fold den tilgang ud, der passer til dig.
+          </p>
+
+          <div className="space-y-3">
+            {/* Dev accordion */}
+            <details className="border border-[#30363d] bg-[#161b22] group">
+              <summary className="p-4 cursor-pointer flex items-center justify-between list-none hover:bg-[#1c2128]">
+                <div className="flex items-center gap-3">
+                  <span className="text-[#7ee787] text-sm">[DEV]</span>
+                  <span className="text-[#c9d1d9]">Udviklere — Byg med din AI-kodningsagent</span>
+                </div>
+                <span className="text-[#8b949e] text-sm group-open:hidden">+ fold ud</span>
+                <span className="text-[#8b949e] text-sm hidden group-open:inline">− fold ind</span>
+              </summary>
+              <div className="px-4 pb-4 pt-2 border-t border-[#30363d] space-y-3">
+                <p className="text-[#8b949e] text-sm leading-relaxed">
+                  Brug Claude Code eller et tilsvarende AI-kodningsværktøj som din primære
+                  samarbejdspartner — ikke bare til at generere kode, men til at drive hele
+                  processen fremad.
+                </p>
+                <ul className="space-y-2">
+                  {[
+                    { label: 'Indlæs og forstå dataen', desc: 'Giv agenten CSV-filen og bed den analysere strukturen og foreslå hvad der kan bygges.' },
+                    { label: 'Byg applikationen', desc: 'Lad agenten skrive selve koden. Beskriv hvad du vil opnå, ikke hvordan.' },
+                    { label: 'Brug Claude API til indsigter', desc: 'Lad AI\'en opsummere, kategorisere og trække mønstre ud af tekstbesvarelserne.' },
+                    { label: 'Generér test-cases og dokumentation', desc: 'Bed agenten om at skrive tests og dokumentere løsningen undervejs.' },
+                  ].map((item, idx) => (
+                    <li key={idx} className="text-sm">
+                      <span className="text-[#7ee787]">{item.label}:</span>{' '}
+                      <span className="text-[#8b949e]">{item.desc}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="border border-[#d29922] bg-[#0d1117] p-3 mt-2">
+                  <p className="text-[#d29922] text-sm">
+                    <strong>Tip:</strong> Prøv fx:{' '}
+                    <em>&quot;Her er de første 50 rækker fra CSV-filen. Hvad er de mest interessante mønstre, og hvad ville du bygge først?&quot;</em>
+                  </p>
+                </div>
+              </div>
+            </details>
+
+            {/* Non-dev accordion */}
+            <details className="border border-[#30363d] bg-[#161b22] group">
+              <summary className="p-4 cursor-pointer flex items-center justify-between list-none hover:bg-[#1c2128]">
+                <div className="flex items-center gap-3">
+                  <span className="text-[#a371f7] text-sm">[NON-DEV]</span>
+                  <span className="text-[#c9d1d9]">Ikke-udviklere — Analyse, design og prototyper</span>
+                </div>
+                <span className="text-[#8b949e] text-sm group-open:hidden">+ fold ud</span>
+                <span className="text-[#8b949e] text-sm hidden group-open:inline">− fold ind</span>
+              </summary>
+              <div className="px-4 pb-4 pt-2 border-t border-[#30363d] space-y-3">
+                <p className="text-[#8b949e] text-sm leading-relaxed">
+                  Du behøver ikke skrive kode for at bidrage meningsfuldt. Her er tre veje ind:
+                </p>
+                <ul className="space-y-3">
+                  <li className="text-sm">
+                    <span className="text-[#a371f7]">Claude Cowork</span>
+                    <span className="text-[#8b949e]"> — Upload et udsnit af CSV-dataen og samarbejd med Claude om at finde mønstre, formulere indsigter og definere hvad der er vigtigst at vise.</span>
+                  </li>
+                  <li className="text-sm">
+                    <span className="text-[#a371f7]">Claude Projects</span>
+                    <span className="text-[#8b949e]"> — Byg et projekt op med kontekst om IDA, NPS og jeres målgruppe. Brug det til at stille spørgsmål til dataen og strukturere jeres fund.</span>
+                  </li>
+                  <li className="text-sm">
+                    <span className="text-[#a371f7]">Figma Make</span>
+                    <span className="text-[#8b949e]"> — Generér en prototype af et NPS-dashboard direkte fra en prompt. Skitser hvad I vil vise, beskriv det, og lad AI&apos;en oversætte det til et visuelt udkast.</span>
+                  </li>
+                </ul>
+                <p className="text-[#8b949e] text-sm mt-2">
+                  Tegn på papir eller whiteboard. Tag et billede og brug det som input til Figma Make eller Claude.
+                  I styrer retningen — AI&apos;en udfører det.
+                </p>
+              </div>
+            </details>
           </div>
         </section>
 
@@ -158,7 +255,7 @@ export default function NpsCaseDetail() {
           </div>
 
           <p className="text-[#c9d1d9] mb-4">
-            Byg en fungerende webapplikation med Claude Code, der som minimum indeholder:
+            I del 1 er opgaven den samme for alle: byg en løsning, der gør NPS-dataen overskuelig og brugbar.
           </p>
 
           <div className="space-y-4">
@@ -197,29 +294,6 @@ export default function NpsCaseDetail() {
                   </li>
                 ))}
               </ul>
-            </div>
-
-            <div className="border border-[#a371f7] bg-[#161b22] p-4">
-              <h3 className="text-[#a371f7] mb-3">Til designere, UX&apos;ere, PO&apos;er og BI&apos;ere</h3>
-              <p className="text-[#8b949e] text-sm mb-3">
-                Claude Code kan generere UI og datavisualiseringer hurtigt — men det kræver mennesker at gøre det brugbart. Overvej:
-              </p>
-              <ul className="space-y-2">
-                {[
-                  { label: 'Informationsarkitektur', desc: 'Hvad skal brugeren se først? Hvad er den vigtigste historie i dataen?' },
-                  { label: 'Brugerrejsen', desc: 'En produktejer vil noget andet end en direktør. Hvordan understøtter I begge?' },
-                  { label: 'Datapræsentation', desc: 'Hvornår er et diagram bedre end et tal? Hvornår hjælper farver — og hvornår forvirrer de?' },
-                ].map((item, idx) => (
-                  <li key={idx} className="text-sm">
-                    <span className="text-[#a371f7]">{item.label}:</span>{' '}
-                    <span className="text-[#8b949e]">{item.desc}</span>
-                  </li>
-                ))}
-              </ul>
-              <p className="text-[#8b949e] text-sm mt-3">
-                Skitser på papir eller whiteboard først. Tag et billede af jeres skitse, vis det til Claude Code,
-                beskriv hvad I ønsker — og iterér derfra. I styrer retningen, Claude Code bygger det.
-              </p>
             </div>
           </div>
         </section>

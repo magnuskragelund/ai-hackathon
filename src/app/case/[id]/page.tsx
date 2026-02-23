@@ -174,25 +174,11 @@ export default function CaseDetail() {
                 </p>
                 <ul className="space-y-3">
                   <li className="text-sm">
-                    <a
-                      href="https://support.claude.com/en/articles/13345190-getting-started-with-cowork"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[#a371f7] hover:text-[#c195fa]"
-                    >
-                      Claude Cowork
-                    </a>
+                    <span className="text-[#a371f7]">Claude Cowork</span>
                     <span className="text-[#8b949e]"> — Samarbejd i realtid med Claude om research, analyse og idéudvikling. Del skærm, stil spørgsmål, iterér på koncepter.</span>
                   </li>
                   <li className="text-sm">
-                    <a
-                      href="https://support.claude.com/en/articles/9517075-what-are-projects"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[#a371f7] hover:text-[#c195fa]"
-                    >
-                      Claude Projects
-                    </a>
+                    <span className="text-[#a371f7]">Claude Projects</span>
                     <span className="text-[#8b949e]"> — Byg et projekt op med kontekst, instruktioner og filer, som Claude altid har adgang til. Godt til at holde tråden i en længere arbejdsproces.</span>
                   </li>
                   <li className="text-sm">
