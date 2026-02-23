@@ -91,7 +91,7 @@ export default function Home() {
 `}
         </pre>
         <div className="mt-4 text-[#8b949e] text-sm">
-          <span className="text-[#7ee787]">v2026.03.04</span> - Byg fremtiden på 48 timer
+          <span className="text-[#7ee787]">v2026.03.04</span> - Fra idé til produkt på én dag
         </div>
         <div className="mt-2 text-[#8b949e] text-sm">
           <span className="animate-pulse">▊</span> System klar. Alle deltagere tilsluttet.
@@ -111,10 +111,30 @@ export default function Home() {
           <div className="p-6">
             <div className="space-y-4">
               {[
-                { num: '01', text: 'Klon starter-repositoryet', code: 'git clone https://github.com/hackathon/starter-kit.git', codeColor: 'text-[#7ee787]' },
-                { num: '02', text: 'Installér dependencies og sæt miljøet op', code: 'npm install && npm run setup', codeColor: 'text-[#7ee787]' },
-                { num: '03', text: 'Hop på Discord-serveren for support i realtid', code: 'https://discord.gg/hackathon2026', codeColor: 'text-[#58a6ff]' },
-                { num: '04', text: 'Begynd at bygge og push commits løbende', code: 'npm run dev # God hacking! 🚀', codeColor: 'text-[#7ee787]' },
+                {
+                  num: '01',
+                  text: 'Mød din makker',
+                  code: '# Hvad er din erfaring med AI-værktøjer? Hvad er du god til? Hvad vil du gerne lære i dag?',
+                  codeColor: 'text-[#8b949e]',
+                },
+                {
+                  num: '02',
+                  text: 'Vælg en case og læs den sammen',
+                  code: '# I bestemmer selv vinklen — deltager, vært eller noget helt eget.',
+                  codeColor: 'text-[#8b949e]',
+                },
+                {
+                  num: '03',
+                  text: 'Åbn jeres AI-værktøj og beskriv hvad I vil bygge',
+                  code: '# Ingen kode kræves for at komme i gang — begynd med at fortælle Claude hvad I forestiller jer.',
+                  codeColor: 'text-[#8b949e]',
+                },
+                {
+                  num: '04',
+                  text: 'Byg, iterér og hav det sjovt',
+                  code: '# I dag handler det ikke om perfekt kode. Det handler om at lære, eksperimentere og se hvad AI kan.',
+                  codeColor: 'text-[#8b949e]',
+                },
               ].map((step) => (
                 <div key={step.num} className="flex gap-3">
                   <span className="text-[#7ee787]">$</span>
