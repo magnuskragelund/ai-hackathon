@@ -33,7 +33,8 @@ const sideQuests = [
 ];
 
 const nonDevQuests = [
-  { task: 'UX & Design', tag: '[KREATIV]', icon: '🎨', link: '/quest/ux-design' },
+  { task: 'Figma Make Deep Dive', tag: '[KREATIV]', icon: '🎨', link: '/quest/figma-make' },
+  { task: 'UX & Design', tag: '[KREATIV]', icon: '✏️', link: '/quest/ux-design' },
   { task: 'Produkt & PO', tag: '[STRATEGISK]', icon: '🎯', link: '/quest/produkt-po' },
   { task: 'Ledelse & Forretning', tag: '[BUSINESS]', icon: '💼', link: '/quest/ledelse-forretning' },
   { task: 'Drift & Ops', tag: '[DEEP DIVE]', icon: '🔧', link: '/quest/drift-ops' },
