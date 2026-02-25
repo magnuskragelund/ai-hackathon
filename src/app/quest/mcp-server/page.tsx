@@ -40,8 +40,8 @@ export default function McpServerQuest() {
             <div className="border-l-2 border-[#58a6ff] pl-4 py-2 bg-[#161b22]">
               <p className="text-[#8b949e] text-sm mb-1">HVAD ER EN MCP-SERVER?</p>
               <p className="text-[#c9d1d9] text-sm">
-                Forestil jer en AI-assistent, der kun kan det, I fortæller den i chatten. En MCP-server er det, der bryder glasset.
-                Når I forbinder en MCP-server, giver I jeres AI-værktøj <strong>hænder</strong>. Den kan nu selv række ud og interagere med et eksternt system &mdash; ikke bare snakke om det.
+                Forestil jer en AI-assistent, der kun kan det, I fortæller den i chatten. 
+                Når I forbinder en MCP-server, giver I jeres AI-værktøj <strong>hænder</strong>. Den kan nu selv række ud og interagere med et eksternt system &mdash; ikke bare snakke om det. Systemet kan være Figma, vores backlog, Docker, en browser der åbner på din computer eller meget andet.
               </p>
             </div>
           </div>
@@ -56,8 +56,9 @@ export default function McpServerQuest() {
           <div className="space-y-3">
             {[
               { uden: '"Her er et screenshot af vores Figma-design — kan du bygge det?"', med: '"Kig selv i vores Figma-fil og byg check-in-skærmen"' },
-              { uden: '"Her er 50 rækker fra databasen, som jeg har kopieret ind"', med: '"Hvor mange gæster er tjekket ind?" — og Claude skriver en query og kører den' },
+              { uden: '"Jeg har kopieret 50 rækker fra API\'et ind i chatten"', med: '"Hvor mange gæster er tjekket ind?" — og Claude henter svaret selv' },
               { uden: '"Kan du skrive en issue-tekst, som jeg så kan oprette manuelt?"', med: '"Opret et issue for den bug, vi fandt" — og Claude gør det selv' },
+              { uden: '"Her er vores designsystem — jeg beskriver komponenterne i tekst"', med: '"Læs vores Figma-fil og list alle komponenter, farver og typografi"' },
             ].map((item, idx) => (
               <div key={idx} className="grid md:grid-cols-2 gap-2">
                 <div className="border border-[#30363d] bg-[#161b22] p-3">
@@ -142,9 +143,11 @@ export default function McpServerQuest() {
             <div className="border border-[#30363d] bg-[#0d1117] p-3">
               <p className="text-[#8b949e] text-xs mb-1">PRØV DEREFTER</p>
               <div className="space-y-1">
-                <p className="text-[#c9d1d9] text-sm italic">&quot;Se dette Figma-frame og byg komponenten i React med Tailwind&quot;</p>
-                <p className="text-[#c9d1d9] text-sm italic">&quot;Find alle farver og typografi fra dette design og generér en Tailwind-config&quot;</p>
-                <p className="text-[#c9d1d9] text-sm italic">&quot;Hvilke komponenter er der i dette Figma-dokument?&quot;</p>
+                <p className="text-[#c9d1d9] text-sm italic"><span className="text-[#7ee787] not-italic">[DEV]</span> &quot;Se dette Figma-frame og byg komponenten i React med Tailwind&quot;</p>
+                <p className="text-[#c9d1d9] text-sm italic"><span className="text-[#7ee787] not-italic">[DEV]</span> &quot;Find alle farver og typografi fra dette design og generér en Tailwind-config&quot;</p>
+                <p className="text-[#c9d1d9] text-sm italic"><span className="text-[#a371f7] not-italic">[UX]</span> &quot;Hvilke komponenter er der i dette Figma-dokument? Lav en oversigt med navne og varianter&quot;</p>
+                <p className="text-[#c9d1d9] text-sm italic"><span className="text-[#a371f7] not-italic">[UX]</span> &quot;Sammenlign dette design med WCAG 2.1 AA — er der kontrastproblemer?&quot;</p>
+                <p className="text-[#c9d1d9] text-sm italic"><span className="text-[#a371f7] not-italic">[PO]</span> &quot;Beskriv alle skærme i dette Figma-dokument og skriv user stories for hvert flow&quot;</p>
               </div>
             </div>
           </div>
@@ -167,8 +170,9 @@ export default function McpServerQuest() {
             <div className="border border-[#30363d] bg-[#0d1117] p-3">
               <p className="text-[#8b949e] text-xs mb-1">PRØV DEREFTER</p>
               <div className="space-y-1">
-                <p className="text-[#c9d1d9] text-sm italic">&quot;Hent alle konferencer fra API&apos;et og vis mig en oversigt&quot;</p>
-                <p className="text-[#c9d1d9] text-sm italic">&quot;Kald dette endpoint og fortæl mig hvilke felter der returneres: [URL]&quot;</p>
+                <p className="text-[#c9d1d9] text-sm italic"><span className="text-[#7ee787] not-italic">[DEV]</span> &quot;Hent OpenAPI-specifikationen og generér en TypeScript-klient&quot;</p>
+                <p className="text-[#c9d1d9] text-sm italic"><span className="text-[#a371f7] not-italic">[ALLE]</span> &quot;Hent alle konferencer fra API&apos;et og vis mig en oversigt&quot;</p>
+                <p className="text-[#c9d1d9] text-sm italic"><span className="text-[#a371f7] not-italic">[ALLE]</span> &quot;Kald dette endpoint og fortæl mig hvilke data der er tilgængelige: [URL]&quot;</p>
               </div>
             </div>
           </div>
@@ -195,8 +199,9 @@ export default function McpServerQuest() {
             <div className="border border-[#30363d] bg-[#0d1117] p-3">
               <p className="text-[#8b949e] text-xs mb-1">PRØV DEREFTER</p>
               <div className="space-y-1">
-                <p className="text-[#c9d1d9] text-sm italic">&quot;Søg efter de nyeste best practices for React Server Components&quot;</p>
-                <p className="text-[#c9d1d9] text-sm italic">&quot;Find dokumentationen for Supabase realtime subscriptions og implementér det&quot;</p>
+                <p className="text-[#c9d1d9] text-sm italic"><span className="text-[#7ee787] not-italic">[DEV]</span> &quot;Find dokumentationen for Supabase realtime subscriptions og implementér det&quot;</p>
+                <p className="text-[#c9d1d9] text-sm italic"><span className="text-[#a371f7] not-italic">[UX]</span> &quot;Søg efter de nyeste best practices for konference-check-in UX og opsummér de vigtigste mønstre&quot;</p>
+                <p className="text-[#c9d1d9] text-sm italic"><span className="text-[#a371f7] not-italic">[PO]</span> &quot;Find eksempler på NPS-dashboards og konkurrentløsninger til medlemsfeedback&quot;</p>
               </div>
             </div>
           </div>
@@ -226,6 +231,8 @@ export default function McpServerQuest() {
             {[
               'Brug Figma MCP til at læse designet for check-in-skærmen og implementér det',
               'Hent alle konferencer fra API\'et og vis mig en oversigt over check-ins',
+              'Læs vores Figma-design og skriv en komponentoversigt med alle varianter, farver og spacing-regler',
+              'Søg efter best practices for konference-apps og skriv en kort anbefalingsrapport',
             ].map((prompt, idx) => (
               <div key={idx} className="border border-[#30363d] bg-[#0d1117] p-3">
                 <p className="text-[#c9d1d9] text-sm italic">&quot;{prompt}&quot;</p>

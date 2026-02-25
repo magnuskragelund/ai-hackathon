@@ -39,6 +39,8 @@ export default function ClaudeMdQuest() {
             <p className="text-[#c9d1d9]">
               CLAUDE.md er jeres projekts &quot;system prompt&quot; &mdash; den kontekst jeres AI-kodningsværktøj altid har med sig.
               De bedste teams bruger den som en levende kontrakt for, hvordan AI&apos;en skal opføre sig.
+              Den er relevant for <strong className="text-[#7ee787]">hele teamet</strong> &mdash; ikke kun udviklere &mdash; fordi
+              den definerer sprog, tone, målgruppe og kvalitetsstandarder, som AI&apos;en følger uanset hvem der bruger den.
             </p>
 
             <div className="border-l-2 border-[#58a6ff] pl-4 py-2 bg-[#161b22]">
@@ -92,6 +94,8 @@ export default function ClaudeMdQuest() {
               { title: '4. API-konfiguration', code: '## API\n- Base URL: https://api.example.com/v1\n- Auth: Bearer token i Authorization-header\n- Brug ALTID error handling på API-kald' },
               { title: '5. Regler og begrænsninger', code: '## Regler\n- Lav ALDRIG auto-commits — spørg altid først\n- Slet ALDRIG filer uden at spørge\n- Kør `npm test` efter alle kodeændringer\n- Skriv ALTID tests til ny funktionalitet\n- Brug ALDRIG any-typer i TypeScript' },
               { title: '6. Projektstruktur', code: '## Struktur\nsrc/\n  api/          # API-klient og service-funktioner\n  components/   # React-komponenter\n  hooks/        # Custom hooks\n  pages/        # Side-komponenter (routes)\n  types/        # TypeScript interfaces og typer\n  utils/        # Hjælpefunktioner' },
+              { title: '7. Målgruppe og tone (vigtigt for alle!)', code: '## Målgruppe og Tone\n- Primær bruger: Konferencevært ved check-in-skranken (ikke-teknisk)\n- Sekundær bruger: Deltager der tjekker sig selv ind\n- Sprog: Dansk, uformelt men professionelt\n- UI-tekster: Korte, handlingsorienterede — "Tjek ind" ikke "Submit"\n- Fejlbeskeder: Venlige og hjælpsomme — "Vi kan ikke finde den billet" ikke "Error 404"' },
+              { title: '8. Designprincipper', code: '## Design\n- Designsystem: Shadcn/UI med vores custom theme\n- Responsivt: Mobile-first — check-in sker ofte på tablet/mobil\n- Tilgængelighed: WCAG 2.1 AA som minimum\n- Farver: Brug ALDRIG farve som eneste indikator (husk farveblinde)' },
             ].map((section, idx) => (
               <div key={idx} className="border border-[#30363d] bg-[#0d1117] p-3">
                 <p className="text-[#7ee787] text-xs mb-2">{section.title.toUpperCase()}</p>
@@ -164,6 +168,8 @@ export default function ClaudeMdQuest() {
               'Analysér mit projekt og foreslå en CLAUDE.md baseret på de mønstre og konventioner, du finder i koden',
               'Her er min CLAUDE.md — review den og foreslå forbedringer baseret på best practices',
               'Opret en CLAUDE.md der sikrer, at al kode følger vores Tailwind + TypeScript + functional components konventioner',
+              'Tilføj en sektion om målgruppe, tone og UI-tekster til vores CLAUDE.md — så AI\'en skriver brugervenlige tekster',
+              'Skriv en CLAUDE.md der også inkluderer designprincipper, tilgængelighedskrav og vores personas — så alle på teamet kan bruge den',
             ].map((prompt, idx) => (
               <div key={idx} className="border border-[#30363d] bg-[#0d1117] p-3">
                 <p className="text-[#c9d1d9] text-sm italic">&quot;{prompt}&quot;</p>

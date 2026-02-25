@@ -39,8 +39,15 @@ export default function HeadlessQuest() {
 
             <p className="text-[#c9d1d9]">
               Claude Code kan køres non-interaktivt fra kommandolinjen &mdash; uden at I sidder og chatter.
-              Det åbner for automatisering: CI/CD-pipelines, batch-processing, automatiske code reviews og scripted workflows.
+              Det åbner for automatisering: batch-analyse af mange filer, automatiske reviews og scripted workflows.
             </p>
+            <div className="border-l-2 border-[#a371f7] pl-4 py-2 bg-[#161b22]">
+              <p className="text-[#a371f7] text-sm mb-1">PRIMÆRT FOR UDVIKLERE</p>
+              <p className="text-[#8b949e] text-sm">
+                Headless mode kræver terminalerfaring, men resultaterne kan bruges af alle:
+                automatisk genererede rapporter, dokumentation og kvalitetstjek som hele teamet kan læse.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -118,6 +125,14 @@ export default function HeadlessQuest() {
               {
                 title: '5. Test-generering',
                 code: 'claude -p "Skriv unit tests for src/components/CheckIn.tsx. Brug Vitest og React Testing Library. Test alle edge cases." \\\n  --allowedTools "Read,Write,Grep,Glob"'
+              },
+              {
+                title: '6. UX-copy review',
+                code: 'claude -p "Gennemgå alle brugervendte tekster i src/components/. Vurdér om knaptekster, fejlbeskeder og labels er klare, handlingsorienterede og konsistente. Skriv en rapport." \\\n  --allowedTools "Read,Grep,Glob"'
+              },
+              {
+                title: '7. Tilgængelighedsrapport',
+                code: 'claude -p "Auditér alle komponenter i src/ for WCAG 2.1 AA. Rapportér fund med fil, linje og anbefalet fix." \\\n  --output-format json \\\n  --allowedTools "Read,Grep,Glob"'
               },
             ].map((example, idx) => (
               <div key={idx} className="border border-[#30363d] bg-[#161b22] p-4 space-y-3">

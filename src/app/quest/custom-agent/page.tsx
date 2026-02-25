@@ -39,6 +39,7 @@ export default function CustomAgentQuest() {
             <p className="text-[#c9d1d9]">
               Claude Code kan delegere opgaver til specialiserede sub-agents &mdash; AI-agenter der kører i isolerede kontekster
               med egne instruktioner og begrænsede værktøjer. Tænk på det som at hyre en specialist til en bestemt opgave.
+              Det kan være en kodereviewer, en UX-auditor, en indholdsredaktør eller en testskriver.
             </p>
           </div>
         </section>
@@ -113,7 +114,7 @@ For hvert fund, rapportér:
                 title: 'Accessibility Auditor',
                 file: '.claude/agents/a11y-auditor.md',
                 tools: 'Read, Grep, Glob',
-                desc: 'En agent der tjekker tilgængelighed',
+                desc: 'En agent der tjekker tilgængelighed — relevant for både UX og dev',
                 content: `Du er en tilgængelighedsreviewer. Gennemgå koden for WCAG 2.1 AA:
 
 1. Semantisk HTML (korrekte elementer, heading-hierarki)
@@ -123,6 +124,36 @@ For hvert fund, rapportér:
 5. Formular-tilgængelighed (labels, fejlbeskeder)
 
 Rapportér hvert fund med fil, linje, WCAG-kriterium og foreslået fix.`
+              },
+              {
+                title: 'UX Copy Reviewer',
+                file: '.claude/agents/ux-copy-reviewer.md',
+                tools: 'Read, Grep, Glob',
+                desc: 'En agent der gennemgår alle brugervendte tekster for klarhed og tone',
+                content: `Du er en UX-skribent. Gennemgå alle brugervendte tekster i koden:
+
+1. Knaptekster: Er de handlingsorienterede? ("Tjek ind" > "Submit")
+2. Fejlbeskeder: Er de hjælpsomme og venlige? Forklarer de hvad brugeren kan gøre?
+3. Tomme tilstande: Er der en klar besked, når der ikke er data?
+4. Konsistens: Bruges de samme termer for de samme ting overalt?
+5. Sprog og tone: Passer det til målgruppen?
+
+Rapportér hvert fund med fil, linje, nuværende tekst og foreslået forbedring.`
+              },
+              {
+                title: 'Product Scope Guard',
+                file: '.claude/agents/scope-guard.md',
+                tools: 'Read, Grep, Glob',
+                desc: 'En agent der tjekker om en feature matcher kravspecifikationen',
+                content: `Du er en produktreviewer. Givet en user story eller kravspecifikation:
+
+1. Gennemgå implementationen og vurdér om alle acceptance criteria er opfyldt
+2. Identificér funktionalitet der mangler
+3. Identificér funktionalitet der er bygget men ikke var specificeret (scope creep)
+4. Vurdér om fejlhåndtering og edge cases er dækket
+5. Skriv en kort status: hvad er done, hvad mangler, hvad er ekstra
+
+Præsentér resultatet som en struktureret rapport.`
               },
             ].map((agent, idx) => (
               <div key={idx} className="border border-[#30363d] bg-[#161b22] p-4 space-y-3">
@@ -196,7 +227,8 @@ Rapportér hvert fund med fil, linje, WCAG-kriterium og foreslået fix.`
             {[
               'Opret en custom agent der reviewer mine React-komponenter for performance-problemer',
               'Byg en test-writer agent der følger vores projekts testkonventioner og kør den på alle komponenter i src/components/',
-              'Lav en dokumentationsagent der genererer JSDoc-kommentarer for alle eksporterede funktioner',
+              'Lav en UX-copy-agent der gennemgår alle knaptekster, fejlbeskeder og tomme tilstande i vores app',
+              'Byg en scope-guard agent der verificerer at vores implementation matcher de user stories vi har defineret',
             ].map((prompt, idx) => (
               <div key={idx} className="border border-[#30363d] bg-[#0d1117] p-3">
                 <p className="text-[#c9d1d9] text-sm italic">&quot;{prompt}&quot;</p>

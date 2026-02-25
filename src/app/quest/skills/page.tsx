@@ -247,6 +247,8 @@ Du er en hjælpsom konferenceassistent. Gør følgende:
               'Opret en Skill der kører vores test suite og rapporterer resultaterne i et læsevenligt format',
               'Lav en /component Skill der scaffolder en React-komponent med TypeScript, Tailwind styling og en tilhørende testfil',
               'Byg en /api-status Skill der henter alle konferencer fra API\'et og viser check-in-status for hver',
+              'Lav en /ux-review Skill der gennemgår alle brugervendte tekster og giver feedback på tone, klarhed og konsistens',
+              'Byg en /pitch Skill der genererer en præsentationsoutline baseret på vores product brief og personas',
             ].map((prompt, idx) => (
               <div key={idx} className="border border-[#30363d] bg-[#0d1117] p-3">
                 <p className="text-[#c9d1d9] text-sm italic">&quot;{prompt}&quot;</p>

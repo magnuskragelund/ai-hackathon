@@ -107,6 +107,28 @@ export default function WildcardQuest() {
                   '→ Headless: code review af PR',
                 ]
               },
+              {
+                title: 'UX-Kvalitetssikring (designere + devs)',
+                steps: [
+                  'Figma MCP (læs design og designtokens)',
+                  '→ Subagent: UX-copy-reviewer (gennemgå alle tekster)',
+                  '→ Subagent: a11y-auditor (tilgængelighed)',
+                  '→ Screenshot-driven: sammenlign implementation med Figma',
+                  '→ CLAUDE.md (designprincipper og tone-regler)',
+                  '→ Headless: generér samlet UX-rapport',
+                ]
+              },
+              {
+                title: 'Research → Pitch (PO + forretning)',
+                steps: [
+                  'MCP: Tavily (research konkurrenter)',
+                  '→ Claude: skriv konkurrentanalyse-rapport',
+                  '→ Claude: generér personas og brugerrejser',
+                  '→ Claude: skriv business case med tal',
+                  '→ Skill /pitch (generér præsentationsoutline)',
+                  '→ Figma Make: prototype af løsningen',
+                ]
+              },
             ].map((pipeline, idx) => (
               <div key={idx} className="border border-[#30363d] bg-[#161b22] p-4 space-y-3">
                 <h3 className="text-[#d29922]">{pipeline.title}</h3>

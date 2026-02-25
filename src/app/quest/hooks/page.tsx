@@ -38,9 +38,17 @@ export default function HooksQuest() {
 
             <p className="text-[#c9d1d9]">
               Hooks er automatiske triggere, der kører scripts, når jeres AI-værktøj gør bestemte ting.
-              Tænk på det som git hooks &mdash; men for jeres AI-workflow. Hver gang Claude skriver en fil,
-              kan den automatisk formatere den.
+              Tænk på det som kvalitetssikring der kører af sig selv. Hver gang Claude skriver en fil,
+              kan den automatisk formatere koden, tjekke tilgængelighed eller validere at designregler overholdes.
             </p>
+            <div className="border-l-2 border-[#a371f7] pl-4 py-2 bg-[#161b22]">
+              <p className="text-[#a371f7] text-sm mb-1">PRIMÆRT FOR UDVIKLERE</p>
+              <p className="text-[#8b949e] text-sm">
+                Hooks konfigureres af udviklere, men gavner hele teamet: de sikrer at kodestandard,
+                tilgængelighed og formatering overholdes automatisk &mdash; så designere og PO&apos;er kan
+                stole på, at det der bygges følger de aftalte regler.
+              </p>
+            </div>
           </div>
         </section>
 

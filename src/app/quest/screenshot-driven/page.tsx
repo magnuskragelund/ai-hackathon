@@ -39,7 +39,9 @@ export default function ScreenshotDrivenQuest() {
             <p className="text-[#c9d1d9]">
               Claude Code kan se billeder. Det åbner for et kraftfuldt workflow: tag et screenshot af jeres app,
               vis det til Claude, og bed den om at fixe layout, farver, responsivitet eller tilføje nye elementer &mdash;
-              med det visuelle som udgangspunkt.
+              med det visuelle som udgangspunkt. Det er især stærkt for <strong className="text-[#7ee787]">designere</strong> og
+              <strong className="text-[#7ee787]">UX&apos;ere</strong>, der kan give visuel feedback direkte uden at skulle beskrive
+              problemer i teknisk sprog.
             </p>
           </div>
         </section>
@@ -194,6 +196,8 @@ export default function ScreenshotDrivenQuest() {
               'Sammenlign denne skitse [billede] med min implementation [screenshot] og list alle forskelle',
               'Her er appen på iPhone 14 [screenshot]. Fiks alle responsivitetsproblemer',
               'Tag dette screenshot [billede] og foreslå 3 konkrete UI-forbedringer',
+              'Her er vores Figma-design [billede] og her er hvad der er bygget [screenshot]. Skriv en QA-rapport med alle afvigelser',
+              'Vurdér denne skærm [screenshot] ud fra Nielsens 10 heuristikker og giv en score per punkt',
             ].map((prompt, idx) => (
               <div key={idx} className="border border-[#30363d] bg-[#0d1117] p-3">
                 <p className="text-[#c9d1d9] text-sm italic">&quot;{prompt}&quot;</p>
