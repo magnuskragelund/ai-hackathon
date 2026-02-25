@@ -39,8 +39,7 @@ export default function CaseDetail() {
             <div className="border-l-2 border-[#58a6ff] pl-4 py-2 bg-[#161b22] my-6">
               <p className="text-[#8b949e] text-sm mb-1">JERES MISSION</p>
               <p className="text-[#c9d1d9]">
-                Brug jeres AI-kodningsværktøj til at vibe-code noget, der gør konferenceoplevelsen
-                bedre &mdash; helt fra bunden. I vælger selv formatet: et website, en app, eller
+                Brug jeres AI-kodningsværktøj til at vibe-code noget, der kan bruges i forbindelse med konference-check in &mdash; helt fra bunden. I vælger selv formatet: et website, en app, eller
                 noget helt tredje. I vælger selv vinklen: støt{' '}
                 <strong className="text-[#7ee787]">deltagerne</strong>, støt{' '}
                 <strong className="text-[#7ee787]">værten</strong>, eller find på noget eget.
@@ -94,7 +93,7 @@ export default function CaseDetail() {
             </div>
 
             <p className="text-[#8b949e] text-sm">
-              Adgang til datasættet udleveres ved hackathonets start.
+              Se afsnittet nedenfor for hvordan I forbinder til API&apos;et.
             </p>
           </div>
         </section>
@@ -148,10 +147,10 @@ export default function CaseDetail() {
                   </p>
                   <div className="mt-2 space-y-1">
                     <code className="block bg-[#161b22] border border-[#30363d] p-2 text-[#58a6ff] text-xs">
-                      Swagger UI: &lt;base-url&gt;/api/v1/docs
+                      Swagger UI: https://hackathon.ralphy.dk/api/v1/docs
                     </code>
                     <code className="block bg-[#161b22] border border-[#30363d] p-2 text-[#58a6ff] text-xs">
-                      OpenAPI-spec: &lt;base-url&gt;/api/v1/openapi.json
+                      OpenAPI-spec: https://hackathon.ralphy.dk/api/v1/openapi.json
                     </code>
                   </div>
                 </div>
@@ -192,6 +191,56 @@ export default function CaseDetail() {
                 </p>
               </div>
             </details>
+          </div>
+        </section>
+
+        {/* Adgang til API'et */}
+        <section className="mb-10">
+          <div className="mb-4">
+            <h2 className="text-[#58a6ff] text-lg mb-2">
+              <span className="text-[#8b949e]">~/</span>adgang-til-apiet
+            </h2>
+            <div className="h-px bg-[#30363d]"></div>
+          </div>
+
+          <div className="space-y-4 leading-relaxed">
+            <p className="text-[#c9d1d9]">
+              Alt data tilgås via et REST API. Start her:
+            </p>
+
+            <div className="border border-[#30363d] bg-[#161b22] p-4 space-y-3">
+              <div>
+                <p className="text-[#8b949e] text-sm mb-1">BASE URL</p>
+                <code className="block bg-[#0d1117] border border-[#30363d] p-2 text-[#58a6ff] text-sm">
+                  https://hackathon.ralphy.dk
+                </code>
+              </div>
+
+              <div>
+                <p className="text-[#8b949e] text-sm mb-1">DOKUMENTATION</p>
+                <div className="space-y-1">
+                  <code className="block bg-[#0d1117] border border-[#30363d] p-2 text-[#58a6ff] text-xs">
+                    Swagger UI: https://hackathon.ralphy.dk/api/v1/docs
+                  </code>
+                  <code className="block bg-[#0d1117] border border-[#30363d] p-2 text-[#58a6ff] text-xs">
+                    OpenAPI-spec: https://hackathon.ralphy.dk/api/v1/openapi.json
+                  </code>
+                </div>
+              </div>
+
+              <div>
+                <p className="text-[#8b949e] text-sm mb-1">AUTENTIFICERING</p>
+                <p className="text-[#c9d1d9] text-sm">
+                  API&apos;et kræver en API-nøgle, som sendes med som header:
+                </p>
+                <code className="block bg-[#0d1117] border border-[#30363d] p-2 text-[#7ee787] text-xs mt-1">
+                  X-API-Key: &lt;jeres-nøgle&gt;
+                </code>
+                <p className="text-[#d29922] text-sm mt-2">
+                  API-nøgler udleveres på dagen.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
