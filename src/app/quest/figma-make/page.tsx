@@ -51,6 +51,12 @@ export default function FigmaMakeQuest() {
                 der genererer kode (React) bag kulisserne. I får en interaktiv prototype &mdash; ikke redigerbare
                 Figma-lag. Tænk på det som en AI-drevet app-bygger med Figmas polish.
               </p>
+              <p className="text-[#c9d1d9] text-sm mt-2">
+                Men jeres arbejde er ikke låst inde: med <strong className="text-[#7ee787]">Copy to Design</strong> kan
+                I tage en Make-prototype og kopiere den direkte over i en Figma-designfil. Derfra kan I redigere
+                det som normale Figma-lag &mdash; justere farver, typografi, spacing og komponenter med fuld kontrol.
+                Det giver jer det bedste fra begge verdener: hurtig prototyping i Make, og præcis finpudsning i Design.
+              </p>
             </div>
           </div>
         </section>
@@ -375,12 +381,12 @@ export default function FigmaMakeQuest() {
               </div>
 
               <div className="border border-[#30363d] bg-[#161b22] p-4 space-y-2">
-                <h3 className="text-[#d29922]">Fra Make til Figma Design</h3>
+                <h3 className="text-[#d29922]">Fra Make til Figma Design (Copy to Design)</h3>
                 <p className="text-[#8b949e] text-sm">
-                  Hvis I vil finpudse designet yderligere, kan I bruge prototypen som reference i Figma Design.
-                  Tag screenshots af de vigtigste skærme og byg dem op som redigerbare Figma-frames &mdash; eller
-                  brug <strong className="text-[#c9d1d9]">First Draft</strong> (Figmas AI i designværktøjet) til at generere
-                  redigerbare lag baseret på en beskrivelse.
+                  Klik <strong className="text-[#c9d1d9]">Copy to Design</strong> i Make for at kopiere jeres prototype
+                  direkte over i en Figma-designfil. Derfra kan I redigere alt som normale Figma-lag &mdash; justere
+                  spacing, farver, typografi og komponenter med fuld kontrol. Det er den hurtigste vej fra &quot;hurtig
+                  prototype&quot; til &quot;poleret design&quot;.
                 </p>
               </div>
 
@@ -392,6 +398,71 @@ export default function FigmaMakeQuest() {
                   Observér hvor de bliver i tvivl &mdash; det er jeres vigtigste designindsigter.
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Opgave: Byg en mini-app med database */}
+        <section className="mb-10">
+          <div className="mb-4">
+            <h2 className="text-[#58a6ff] text-lg mb-2"><span className="text-[#8b949e]">~/</span>opgave-mini-app-med-data</h2>
+            <div className="h-px bg-[#30363d]"></div>
+          </div>
+          <div className="space-y-4 leading-relaxed">
+            <p className="text-[#c9d1d9]">
+              Figma Make kan mere end statiske prototyper. Det kan bygge <strong className="text-[#7ee787]">små, fungerende apps</strong> med
+              en database bagved &mdash; fx via Supabase, som Make har indbygget understøttelse for. Det betyder,
+              at data faktisk bliver gemt, og at flere brugere kan se det samme.
+            </p>
+
+            <div className="border-l-2 border-[#d29922] pl-4 py-2 mb-4">
+              <p className="text-[#c9d1d9] text-sm">
+                <strong>Opgave:</strong> Byg en lille, fungerende app i Figma Make &mdash; ikke bare en prototype, men noget
+                der faktisk gemmer og viser data. Vælg et af eksemplerne nedenfor, eller find på jeres eget.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              {[
+                {
+                  title: 'Indkøbskurv / Bestillingsflow',
+                  desc: 'En bruger kan browse produkter, tilføje til kurv, se kurven og gennemføre en bestilling. Ordren gemmes i databasen.',
+                  prompt: 'Byg en lille webshop med 6-8 produkter (brug placeholder-billeder). Brugeren kan tilføje produkter til en kurv, se kurven, og klikke "Bestil". Ordren gemmes i en Supabase-database. Vis en bekræftelsesside med ordrenummer. Brug Shadcn/UI-stil.',
+                },
+                {
+                  title: 'Administrationspanel',
+                  desc: 'Et simpelt admin-panel hvor man kan oprette, redigere og slette indhold — fx talks på en konference, produkter i en butik, eller medlemmer i en forening.',
+                  prompt: 'Byg et admin-panel til at administrere talks på en konference. Man skal kunne: se en liste over talks med speaker, titel og tidspunkt, oprette en ny talk, redigere en eksisterende, og slette en talk. Data skal gemmes i en Supabase-database. Brug et rent, professionelt design med en sidebar-navigation.',
+                },
+                {
+                  title: 'Feedback-væg / Idétavle',
+                  desc: 'Alle kan poste en kort besked eller idé, og se hvad andre har skrevet. Tænk "Post-it-tavle" i digital form.',
+                  prompt: 'Byg en digital idétavle hvor brugere kan skrive en kort besked (max 280 tegn), vælge en farve, og poste den. Alle beskeder vises som kort i et grid. Nyeste først. Data gemmes i Supabase, så alle ser det samme. Farverigt, legende design.',
+                },
+                {
+                  title: 'Simpel afstemning / Poll',
+                  desc: 'Opret et spørgsmål med valgmuligheder, del linket, og se resultaterne live.',
+                  prompt: 'Byg en poll-app med to skærme: 1) Opret en afstemning med et spørgsmål og 2-5 valgmuligheder, 2) En stemmeside hvor man vælger sit svar og ser live-resultater som bar chart. Data gemmes i Supabase. Del-venligt design med stor tekst.',
+                },
+              ].map((example, idx) => (
+                <div key={idx} className="border border-[#30363d] bg-[#161b22] p-4 space-y-3">
+                  <h3 className="text-[#d29922]">{example.title}</h3>
+                  <p className="text-[#8b949e] text-sm">{example.desc}</p>
+                  <div className="border border-[#30363d] bg-[#0d1117] p-3">
+                    <p className="text-[#8b949e] text-xs mb-1">PROMPT</p>
+                    <p className="text-[#c9d1d9] text-sm italic">&quot;{example.prompt}&quot;</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="border-l-2 border-[#58a6ff] pl-4 py-2">
+              <p className="text-[#58a6ff] text-xs">SUPABASE-TIP</p>
+              <p className="text-[#8b949e] text-sm">
+                Figma Make kan selv oprette og konfigurere en Supabase-database til jeres app. I behøver ikke sætte noget op
+                manuelt &mdash; bare beskriv hvilke data der skal gemmes, så klarer Make resten. Nævn &quot;gem data i Supabase&quot;
+                eller &quot;brug en database&quot; i jeres prompt.
+              </p>
             </div>
           </div>
         </section>
