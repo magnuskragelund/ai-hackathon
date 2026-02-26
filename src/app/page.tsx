@@ -81,7 +81,7 @@ export default function Home() {
     <div className="min-h-screen bg-[#0d1117] text-[#c9d1d9] font-mono p-6">
       {/* Header med ASCII Art */}
       <header className="mb-12 border-2 border-[#30363d] bg-[#161b22] p-6">
-        <pre className="text-[#58a6ff] text-sm md:text-base overflow-x-auto text-center">
+        <pre className="text-[#58a6ff] text-[0.55rem] leading-tight sm:text-xs md:text-sm overflow-x-auto flex justify-center">
 {`
 ██╗  ██╗ █████╗  ██████╗██╗  ██╗ █████╗ ████████╗██╗  ██╗ ██████╗ ███╗   ██╗
 ██║  ██║██╔══██╗██╔════╝██║ ██╔╝██╔══██╗╚══██╔══╝██║  ██║██╔═══██╗████╗  ██║
@@ -220,7 +220,7 @@ export default function Home() {
             <div className="space-y-3">
               {sideQuests.map((quest, idx) => (
                 <Link key={idx} href={quest.link} className="block">
-                  <div className="flex items-center justify-between border border-[#30363d] bg-[#161b22] p-3 hover:border-[#7ee787] transition-colors">
+                  <div className="flex items-center justify-between border border-[#30363d] bg-[#161b22] p-4 hover:border-[#7ee787] transition-colors">
                     <div className="flex items-center gap-3">
                       <span className="text-xl">{quest.icon}</span>
                       <span className="text-[#c9d1d9] text-sm">{quest.task}</span>
@@ -250,7 +250,7 @@ export default function Home() {
             <div className="space-y-3">
               {nonDevQuests.map((quest, idx) => (
                 <Link key={idx} href={quest.link} className="block">
-                  <div className="flex items-center justify-between border border-[#30363d] bg-[#161b22] p-3 hover:border-[#a371f7] transition-colors">
+                  <div className="flex items-center justify-between border border-[#30363d] bg-[#161b22] p-4 hover:border-[#a371f7] transition-colors">
                     <div className="flex items-center gap-3">
                       <span className="text-xl">{quest.icon}</span>
                       <span className="text-[#c9d1d9] text-sm">{quest.task}</span>

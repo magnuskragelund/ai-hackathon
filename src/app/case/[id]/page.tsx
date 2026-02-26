@@ -359,8 +359,8 @@ export default function CaseDetail() {
                 <div className="flex items-start gap-3">
                   <span className="text-[#7ee787] text-sm mt-1">[{task.id}]</span>
                   <div className="flex-1">
-                    <h4 className="text-[#c9d1d9] mb-2">{task.title}</h4>
-                    <ul className="space-y-1">
+                    <h4 className="text-[#c9d1d9] mb-3">{task.title}</h4>
+                    <ul className="space-y-2">
                       {task.items.map((item, idx) => (
                         <li key={idx} className="text-[#8b949e] text-sm">
                           <span className="text-[#7ee787] mr-2">•</span>
