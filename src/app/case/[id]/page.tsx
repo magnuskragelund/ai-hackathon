@@ -75,13 +75,16 @@ export default function CaseDetail() {
                 <tbody>
                   {[
                     { res: 'Konferencer', desc: '3 konferencer med navn, datoer og aktiv-status' },
-                    { res: 'Billetter', desc: '~200 pr. konference med unikke billetnumre og QR-kode-potentiale' },
+                    { res: 'Billetter', desc: '~200 pr. konference med unikke billetnumre — API\'et kan generere QR-kode-billeder direkte' },
                     { res: 'Gæster', desc: 'Navngivne deltagere tilknyttet billetter' },
-                    { res: 'Check-ins', desc: '30-40% allerede tjekket ind — resten venter på jer' },
+                    { res: 'Check-ins', desc: '30-40% allerede tjekket ind — resten venter på jer. Støtter enkelt- og bulk-check-in (op til 20 ad gangen)' },
                     { res: 'Extras', desc: 'Tilkøb som Dinner Party og Snack Buffet på billetterne' },
                     { res: 'Talks', desc: '10-15 talks pr. konference med speaker, track, tidspunkt og rum' },
                     { res: 'Evalueringer', desc: 'Deltager-ratings (1-5) og kommentarer på de enkelte talks' },
-                    { res: 'Statistik', desc: 'Realtidsstatistik, check-in-rater og evalueringsoversigter' },
+                    { res: 'Statistik', desc: 'Overordnet statistik og realtidsdata pr. konference — optimeret til polling og live dashboards' },
+                    { res: 'Aktivitetslog', desc: 'Kronologisk feed af alle hændelser — filtrérbart på konference, tidspunkt og type' },
+                    { res: 'Registrering', desc: 'Selvregistrering via token — slå status op på e-mail' },
+                    { res: 'Eksport', desc: 'Download gæsteliste, check-in-log og konferenceoversigt som CSV' },
                   ].map((row, idx) => (
                     <tr key={idx} className="border-b border-[#30363d] last:border-0">
                       <td className="p-3 text-[#7ee787]">{row.res}</td>
@@ -236,8 +239,24 @@ export default function CaseDetail() {
                 <code className="block bg-[#0d1117] border border-[#30363d] p-2 text-[#7ee787] text-xs mt-1">
                   X-API-Key: &lt;jeres-nøgle&gt;
                 </code>
+                <p className="text-[#8b949e] text-xs mt-2">
+                  Tre roller: <span className="text-[#7ee787]">Admin</span> (fuld adgang inkl. eksport) · <span className="text-[#7ee787]">Staff</span> (check-in og statistik) · <span className="text-[#7ee787]">Readonly</span> (kun læsning)
+                </p>
                 <p className="text-[#d29922] text-sm mt-2">
                   API-nøgler udleveres på dagen.
+                </p>
+              </div>
+
+              <div>
+                <p className="text-[#8b949e] text-sm mb-1">REALTID (WEBSOCKETS)</p>
+                <p className="text-[#c9d1d9] text-sm">
+                  API&apos;et understøtter SignalR WebSockets til live opdateringer:
+                </p>
+                <code className="block bg-[#0d1117] border border-[#30363d] p-2 text-[#58a6ff] text-xs mt-1">
+                  /hubs/checkin
+                </code>
+                <p className="text-[#8b949e] text-xs mt-2">
+                  Events: <span className="text-[#7ee787]">CheckInCreated</span> · <span className="text-[#7ee787]">CheckInCancelled</span> · <span className="text-[#7ee787]">StatsUpdated</span>
                 </p>
               </div>
             </div>
@@ -313,6 +332,7 @@ export default function CaseDetail() {
                 id: 'C',
                 title: 'QR-kode Scanner',
                 items: [
+                  'API\'et kan generere QR-kode-billeder pr. billet — brug dem til print eller visning på skærm',
                   'Byg en mobil-venlig check-in-app med kamera til QR-scanning',
                   'Mapping fra QR-kode til billetnummer → automatisk check-in via API\'et',
                   'Vis bekræftelse eller fejlbesked direkte på skærmen',
@@ -322,10 +342,10 @@ export default function CaseDetail() {
                 id: 'D',
                 title: 'Live Dashboard for Konferenceholdet',
                 items: [
-                  'Check-in-rate over tid (graf)',
-                  'Antal tjekket ind vs. forventet (progress bar)',
-                  'Tilkøbsoversigt: hvor mange med Dinner Party / Snack Buffet er ankommet?',
-                  'Automatisk opdatering hvert 5.-10. sekund',
+                  'Brug SignalR WebSockets (/hubs/checkin) til øjeblikkelige opdateringer uden polling',
+                  'Eller poll /api/v1/stats/realtime hvert 5.-10. sekund',
+                  'Check-in-rate over tid (graf), progress bar og tilkøbsoversigt',
+                  'Aktivitetsfeed: se de seneste check-ins i kronologisk rækkefølge',
                 ],
               },
               {
@@ -333,8 +353,8 @@ export default function CaseDetail() {
                 title: 'Deltager Self-Service App',
                 items: [
                   'Slå din billet op og se din status',
-                  'Se konferenceprogrammet og vælg sessions/tracks',
-                  'Deltag i en konkurrence eller quiz knyttet til konferencen',
+                  'Se konferenceprogrammet og talks med speaker, rum og tidspunkt',
+                  'Selvregistrering: tilmeld dig direkte via API\'et med et registreringstoken',
                 ],
               },
               {
@@ -342,12 +362,21 @@ export default function CaseDetail() {
                 title: 'Talk-Evaluering',
                 items: [
                   'Lad deltagere rate og kommentere talks (1-5 stjerner + fritekst)',
-                  'Vis oversigt pr. talk — gennemsnitsrating, antal, ratingfordeling',
+                  'Vis sammenfatning pr. talk — gennemsnitsrating, antal evalueringer, fordeling',
                   'Konferenceholdet kan se top- og bundratede talks og spotte mønstre',
                 ],
               },
               {
                 id: 'G',
+                title: 'Bulk Check-in og Administration',
+                items: [
+                  'Check ind op til 20 deltagere på én gang med bulk-endpointet',
+                  'Annullér fejlagtige check-ins og se aktivitetsloggen',
+                  'Eksportér gæstelister og check-in-log til CSV (Admin-rolle)',
+                ],
+              },
+              {
+                id: 'H',
                 title: 'Wildcard: Jeres Egen Idé',
                 items: [
                   'Har I en idé, der ikke står på listen? Afprøv den!',
