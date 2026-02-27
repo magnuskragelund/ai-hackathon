@@ -127,7 +127,7 @@ export default function InstallationPage() {
               <h3 className="text-[#d29922] text-sm">Trin 2 — Installér Docker Desktop</h3>
               <div className="space-y-2">
                 {[
-                  <>Download <a href="https://docs.docker.com/desktop/release-notes/#4570" target="_blank" rel="noopener noreferrer" className="text-[#58a6ff] hover:text-[#79c0ff]">Docker Desktop 4.55</a> (Windows)</>,
+                  <>Download <a href="https://docs.docker.com/desktop/release-notes/#4550" target="_blank" rel="noopener noreferrer" className="text-[#58a6ff] hover:text-[#79c0ff]">Docker Desktop 4.55</a> (Windows)</>,
                   'Kør installeren og følg guiden',
                   'Sørg for at "Use WSL 2 based engine" er slået til under Settings → General',
                   'Genstart hvis Docker beder om det',
@@ -176,7 +176,7 @@ export default function InstallationPage() {
               <h3 className="text-[#d29922] text-sm">Trin 1 — Installér Docker Desktop</h3>
               <div className="space-y-2">
                 {[
-                  <>Download <a href="https://docs.docker.com/desktop/release-notes/#4570" target="_blank" rel="noopener noreferrer" className="text-[#58a6ff] hover:text-[#79c0ff]">Docker Desktop 4.55</a> (Mac)</>,
+                  <>Download <a href="https://docs.docker.com/desktop/release-notes/#4550" target="_blank" rel="noopener noreferrer" className="text-[#58a6ff] hover:text-[#79c0ff]">Docker Desktop 4.55</a> (Mac)</>,
                   'Kør installeren og følg guiden',
                   'Genstart hvis Docker beder om det',
                 ].map((item, idx) => (

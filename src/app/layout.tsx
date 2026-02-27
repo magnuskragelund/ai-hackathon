@@ -8,8 +8,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hackathon 2026",
-  description: "Byg fremtiden på 48 timer",
+  title: "IDA Dubai AI Hackathon",
+  description: "Eksperimenter med agenter og generativ AI",
+  openGraph: {
+    title: "IDA Dubai AI Hackathon",
+    description: "Eksperimenter med agenter og generativ AI",
+    siteName: "IDA Dubai AI Hackathon",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IDA Dubai AI Hackathon",
+    description: "Eksperimenter med agenter og generativ AI",
+  },
 };
 
 export default function RootLayout({
