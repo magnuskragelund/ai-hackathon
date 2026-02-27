@@ -1,4 +1,4 @@
-import { Terminal, Zap, Briefcase, Calendar, ChevronRight, MapPin, Gamepad2, PartyPopper } from 'lucide-react';
+import { Terminal, Zap, Briefcase, Calendar, ChevronRight, MapPin, Gamepad2, PartyPopper, Download } from 'lucide-react';
 import Link from 'next/link';
 
 const cases = [
@@ -110,6 +110,16 @@ export default function Home() {
             </h2>
           </div>
           <div className="p-6">
+            <Link href="/installation" className="flex items-center justify-between border border-[#30363d] bg-[#161b22] hover:border-[#7ee787] transition-colors p-4 mb-6">
+              <div className="flex items-center gap-3">
+                <Download className="w-5 h-5 text-[#7ee787]" />
+                <div>
+                  <p className="text-[#c9d1d9] text-sm">Installér Claude Code</p>
+                  <p className="text-[#8b949e] text-xs mt-0.5">Licens, Docker og opsætning — step for step</p>
+                </div>
+              </div>
+              <ChevronRight className="w-4 h-4 text-[#8b949e]" />
+            </Link>
             <div className="space-y-4">
               {[
                 {
