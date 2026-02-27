@@ -71,7 +71,7 @@ export default function InstallationPage() {
           <div className="p-6 space-y-5">
             <p className="text-[#c9d1d9] text-sm leading-relaxed">
               Inden du går i gang skal du have en <strong className="text-[#c9d1d9]">betalt Pro-licens</strong> til Claude.
-              Den udførende part i gruppen anskaffer sig en individuel, månedligt betalt licens.
+              Den udførende part i gruppen anskaffer sig en individuel, månedligt betalt licens på dagen.
             </p>
 
             <div>
@@ -128,7 +128,7 @@ export default function InstallationPage() {
               <div className="space-y-2">
                 {[
                   <>Download <a href="https://docs.docker.com/desktop/release-notes/#4550" target="_blank" rel="noopener noreferrer" className="text-[#58a6ff] hover:text-[#79c0ff]">Docker Desktop 4.55</a> (Windows)</>,
-                  'Kør installeren og følg guiden',
+                  'Kør installeren og følg guiden. HUSK: hvis du ikke har en licens til Docker i forvejen, skal du oprette en bruger med din @ida mail og derefter skrive til platform og få tildelt en licens til din bruger',
                   'Sørg for at "Use WSL 2 based engine" er slået til under Settings → General',
                   'Genstart hvis Docker beder om det',
                 ].map((item, idx) => (
