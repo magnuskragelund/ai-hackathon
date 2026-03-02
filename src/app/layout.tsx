@@ -8,16 +8,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "IDA Dubai AI Hackathon",
+  title: "IDA AI Hackathon",
   description: "Eksperimenter med agenter og generativ AI",
   openGraph: {
-    title: "IDA Dubai AI Hackathon",
+    title: "IDA AI Hackathon",
     description: "Eksperimenter med agenter og generativ AI",
-    siteName: "IDA Dubai AI Hackathon",
+    siteName: "IDA AI Hackathon",
   },
   twitter: {
     card: "summary_large_image",
-    title: "IDA Dubai AI Hackathon",
+    title: "IDA AI Hackathon",
     description: "Eksperimenter med agenter og generativ AI",
   },
 };
