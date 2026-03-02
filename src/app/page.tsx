@@ -44,12 +44,11 @@ const schedule = {
   daytime: {
     title: 'DAGSPROGRAM',
     events: [
-      { time: '09:15', event: 'Velkomst & Context-Setting', status: 'opening' },
+      { time: '09:15', event: 'Velkomst, grupper & casepræsentation', status: 'opening' },
       { time: '09:25', event: 'Show and tell: "Fra ur til applikation"', status: 'normal' },
-      { time: '10:00', event: 'Grupper & casepræsentation', status: 'important' },
-      { time: '10:20', event: 'Pause ☕', status: 'normal' },
-      { time: '10:30', event: 'Hackathon-session starter! 🎯', status: 'start' },
-      { time: '15:30', event: 'Deadline & præsentationer ⏰', status: 'deadline' },
+      { time: '10:10', event: 'Hackathon-session starter! 🎯', status: 'start' },
+      { time: '13:00', event: 'Kort plenum til erfaringsudveksling', status: 'normal' },
+      { time: '16:00', event: 'Deadline & præsentationer ⏰', status: 'deadline' },
       { time: '16:30', event: 'Energizer & afrunding', status: 'normal' },
       { time: '16:45', event: 'Praktisk afslutning', status: 'closing' },
     ]
