@@ -342,7 +342,65 @@ export default function NpsCaseDetail() {
           </div>
         </section>
       </main>
+      <section className="max-w-4xl mx-auto px-6 pb-8">
+  <div className="mb-4">
+    <h2 className="text-[#58a6ff] text-lg mb-2">
+      <span className="text-[#8b949e]">~/</span>opsætning-azure-openai
+    </h2>
+    <div className="h-px bg-[#30363d]"></div>
+  </div>
 
+  <p className="text-[#8b949e] text-sm mb-4">
+    Kun nødvendigt hvis I vælger en opgave der kræver AI (sentiment, summary, RAG osv.)
+  </p>
+
+  <details className="border border-[#30363d] bg-[#161b22] group">
+    <summary className="p-4 cursor-pointer flex items-center justify-between list-none hover:bg-[#1c2128]">
+      <div className="flex items-center gap-3">
+        <span className="text-[#f85149] text-sm">[SETUP]</span>
+        <span className="text-[#c9d1d9]">Azure OpenAI credentials</span>
+      </div>
+      <span className="text-[#8b949e] text-sm group-open:hidden">+ fold ud</span>
+      <span className="text-[#8b949e] text-sm hidden group-open:inline">− fold ind</span>
+    </summary>
+    <div className="px-4 pb-4 pt-2 border-t border-[#30363d] space-y-3">
+      <p className="text-[#8b949e] text-sm leading-relaxed">
+        Sæt API-nøglen som miljøvariabel i jeres terminal:
+      </p>
+
+      <div className="border border-[#30363d] bg-[#0d1117] p-3 text-sm font-mono space-y-2">
+        <p className="text-[#8b949e]"># Mac/Linux</p>
+        <p className="text-[#c9d1d9]">export AZURE_OPENAI_API_KEY=&quot;nøgle-udleveres-på-dagen&quot;</p>
+        <p className="text-[#8b949e] mt-2"># Windows (PowerShell)</p>
+        <p className="text-[#c9d1d9]">$env:AZURE_OPENAI_API_KEY=&quot;nøgle-udleveres-på-dagen&quot;</p>
+      </div>
+
+      <div className="border border-[#30363d] bg-[#0d1117] overflow-x-auto">
+        <table className="w-full text-sm">
+          <tbody>
+            {[
+              { field: 'Endpoint', value: 'https://xxx.openai.azure.com/' },
+              { field: 'API version', value: '2024-12-01-preview' },
+              { field: 'Chat-model', value: 'gpt-4.1' },
+              { field: 'Embedding-model', value: 'text-embedding-3-large' },
+            ].map((row, idx) => (
+              <tr key={idx} className="border-b border-[#30363d] last:border-0">
+                <td className="p-3 text-[#7ee787]">{row.field}</td>
+                <td className="p-3 text-[#c9d1d9] font-mono">{row.value}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p className="text-[#8b949e] text-sm">
+        Nøglen gælder kun på dagen og slettes i Azure bagefter.
+      </p>
+    </div>
+  </details>
+</section>
+
+      
       {/* Footer */}
       <footer className="border-t border-[#30363d] bg-[#161b22] px-6 py-4 mt-12">
         <div className="max-w-4xl mx-auto text-center text-[#8b949e] text-sm">
