@@ -350,11 +350,9 @@ export default function NpsCaseDetail() {
     <div className="h-px bg-[#30363d]"></div>
   </div>
 
-  <p className="text-[#8b949e] text-sm mb-4">
-    Kun nødvendigt hvis I vælger en opgave der kræver AI (sentiment, summary, RAG osv.) 
-    Claude code kan skrive koden men skal bruge nogle Azure OpenAI variable, som giver adgang til vores AI Azure modeller. 
-    API nøgle og endpoint udleveres på dagen. Tag fat i Sammy.
-  </p>
+  <p className="text-[#8b949e] text-sm mb-1">Kun nødvendigt hvis I vælger en opgave der kræver AI (sentiment, summary, RAG osv.)</p>
+  <p className="text-[#8b949e] text-sm mb-1">Claude Code kan skrive koden, men skal bruge nogle Azure OpenAI variable for adgang til vores AI-modeller.</p>
+  <p className="text-[#8b949e] text-sm mb-4">API-nøgle og endpoint udleveres på dagen. Tag fat i Dodo.</p>
 
   <details className="border border-[#30363d] bg-[#161b22] group">
     <summary className="p-4 cursor-pointer flex items-center justify-between list-none hover:bg-[#1c2128]">
