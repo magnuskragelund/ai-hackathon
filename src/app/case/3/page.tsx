@@ -152,7 +152,16 @@ export default function NpsCaseDetail() {
           </div>
 
           <p className="text-[#8b949e] text-sm mt-3">
-            Datasættet udleveres ved hackathonets start.
+            Datasættet udleveres ved hackathonets start — eller du kan{' '}
+            <a
+              href="https://ingeniorforeningenidanmark.sharepoint.com/:f:/s/ITUdviklingogArkitektur/IgAVSYEpOdLARbnaolLde064ATGWTN4zLWYbPXYqwWhDE60?e=zrniLU"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#58a6ff] hover:underline"
+            >
+              hente det her
+            </a>
+            .
           </p>
         </section>
 
@@ -223,10 +232,6 @@ export default function NpsCaseDetail() {
                   Du behøver ikke skrive kode for at bidrage meningsfuldt. Her er tre veje ind:
                 </p>
                 <ul className="space-y-3">
-                  <li className="text-sm">
-                    <span className="text-[#a371f7]">Claude Cowork</span>
-                    <span className="text-[#8b949e]"> — Upload et udsnit af CSV-dataen og samarbejd med Claude om at finde mønstre, formulere indsigter og definere hvad der er vigtigst at vise.</span>
-                  </li>
                   <li className="text-sm">
                     <span className="text-[#a371f7]">Claude Projects</span>
                     <span className="text-[#8b949e]"> — Byg et projekt op med kontekst om IDA, NPS og jeres målgruppe. Brug det til at stille spørgsmål til dataen og strukturere jeres fund.</span>

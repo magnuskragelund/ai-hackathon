@@ -59,7 +59,7 @@ export default function CaseDetail() {
 
           <div className="space-y-4 leading-relaxed">
             <p className="text-[#c9d1d9]">
-              I arbejder ikke med en tom skærm. Der er et live datasæt klar med realistiske data
+              Der er et live datasæt klar med realistiske data
               fra tre fiktive konferencer &mdash; billetter, gæster, check-ins, talks og evalueringer.
               I kan trække data ud, vise dem, reagere på dem og skrive tilbage til dem.
             </p>
@@ -77,7 +77,7 @@ export default function CaseDetail() {
                     { res: 'Konferencer', desc: '3 konferencer med navn, datoer og aktiv-status' },
                     { res: 'Billetter', desc: '~200 pr. konference med unikke billetnumre — API\'et kan generere QR-kode-billeder direkte' },
                     { res: 'Gæster', desc: 'Navngivne deltagere tilknyttet billetter' },
-                    { res: 'Check-ins', desc: '30-40% allerede tjekket ind — resten venter på jer. Støtter enkelt- og bulk-check-in (op til 20 ad gangen)' },
+                    { res: 'Check-ins', desc: '30-40% allerede tjekket ind — resten venter på jer. Understøtter enkelt- og bulk-check-in (op til 20 ad gangen)' },
                     { res: 'Extras', desc: 'Tilkøb som Dinner Party og Snack Buffet på billetterne' },
                     { res: 'Talks', desc: '10-15 talks pr. konference med speaker, track, tidspunkt og rum' },
                     { res: 'Evalueringer', desc: 'Deltager-ratings (1-5) og kommentarer på de enkelte talks' },
@@ -175,10 +175,6 @@ export default function CaseDetail() {
                   Du behøver ikke skrive kode for at bidrage meningsfuldt. Her er tre veje ind:
                 </p>
                 <ul className="space-y-3">
-                  <li className="text-sm">
-                    <span className="text-[#a371f7]">Claude Cowork</span>
-                    <span className="text-[#8b949e]"> — Samarbejd i realtid med Claude om research, analyse og idéudvikling. Del skærm, stil spørgsmål, iterér på koncepter.</span>
-                  </li>
                   <li className="text-sm">
                     <span className="text-[#a371f7]">Claude Projects</span>
                     <span className="text-[#8b949e]"> — Byg et projekt op med kontekst, instruktioner og filer, som Claude altid har adgang til. Godt til at holde tråden i en længere arbejdsproces.</span>

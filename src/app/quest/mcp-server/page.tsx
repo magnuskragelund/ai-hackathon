@@ -153,31 +153,6 @@ export default function McpServerQuest() {
           </div>
         </section>
 
-        {/* Fetch MCP */}
-        <section className="mb-10">
-          <div className="mb-4">
-            <h2 className="text-[#58a6ff] text-lg mb-2"><span className="text-[#8b949e]">~/</span>fetch-mcp</h2>
-            <div className="h-px bg-[#30363d]"></div>
-          </div>
-          <div className="border border-[#30363d] bg-[#161b22] p-4 space-y-4">
-            <h3 className="text-[#d29922]">Fetch MCP (generel HTTP)</h3>
-            <p className="text-[#8b949e] text-sm">
-              Giv Claude adgang til at hente data fra vilkårlige URL&apos;er &mdash; fx jeres hackathon-API eller en ekstern tjeneste.
-            </p>
-            <div className="border border-[#30363d] bg-[#0d1117] p-3">
-              <code className="block text-[#7ee787] text-sm">claude mcp add --transport stdio fetch -- npx -y @anthropic/fetch-mcp</code>
-            </div>
-            <div className="border border-[#30363d] bg-[#0d1117] p-3">
-              <p className="text-[#8b949e] text-xs mb-1">PRØV DEREFTER</p>
-              <div className="space-y-1">
-                <p className="text-[#c9d1d9] text-sm italic"><span className="text-[#7ee787] not-italic">[DEV]</span> &quot;Hent OpenAPI-specifikationen og generér en TypeScript-klient&quot;</p>
-                <p className="text-[#c9d1d9] text-sm italic"><span className="text-[#a371f7] not-italic">[ALLE]</span> &quot;Hent alle konferencer fra API&apos;et og vis mig en oversigt&quot;</p>
-                <p className="text-[#c9d1d9] text-sm italic"><span className="text-[#a371f7] not-italic">[ALLE]</span> &quot;Kald dette endpoint og fortæl mig hvilke data der er tilgængelige: [URL]&quot;</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Tavily MCP */}
         <section className="mb-10">
           <div className="mb-4">

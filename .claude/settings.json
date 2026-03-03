@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "additionalDirectories": [
+      "/Users/mak/Dev/hackathon/hackathon-site/src/app"
+    ],
+    "allow": [
+      "WebFetch(domain:hackathon.ralphy.dk)"
+    ]
+  }
+}

@@ -84,18 +84,16 @@ export default function ClaudeMdQuest() {
           <div className="border border-[#30363d] bg-[#161b22] p-4 space-y-4">
             <h3 className="text-[#d29922]">Opret en gennemtænkt CLAUDE.md</h3>
             <p className="text-[#8b949e] text-sm">
-              Den skal fungere som et levende dokument, der gør jeres AI-værktøj skarpere. Her er hvad den bør indeholde:
+              Den skal fungere som et levende dokument, der gør jeres AI-værktøj skarpere. Her er eksempler på, hvad den kan indeholde:
             </p>
 
             {[
-              { title: '1. Projektbeskrivelse', code: '# Konference Check-in App\n\nEn webapp til konference check-in, bygget under IDA AI Hackathon 2026.\nBackend-API er tilgængeligt på [base-url] med API-nøgle [key].' },
-              { title: '2. Tech stack og arkitektur', code: '## Tech Stack\n- Frontend: React + TypeScript + Vite\n- Styling: Tailwind CSS (brug ALDRIG inline styles)\n- State: React hooks (ingen Redux)\n- API: REST via fetch — alle kald går gennem src/api/client.ts' },
-              { title: '3. Kodekonventioner', code: '## Konventioner\n- Skriv TypeScript — aldrig plain JavaScript\n- Brug functional components med hooks\n- Navngiv komponenter med PascalCase, filer med kebab-case\n- Én komponent pr. fil\n- Brug named exports (ikke default exports)' },
-              { title: '4. API-konfiguration', code: '## API\n- Base URL: https://api.example.com/v1\n- Auth: Bearer token i Authorization-header\n- Brug ALTID error handling på API-kald' },
-              { title: '5. Regler og begrænsninger', code: '## Regler\n- Lav ALDRIG auto-commits — spørg altid først\n- Slet ALDRIG filer uden at spørge\n- Kør `npm test` efter alle kodeændringer\n- Skriv ALTID tests til ny funktionalitet\n- Brug ALDRIG any-typer i TypeScript' },
-              { title: '6. Projektstruktur', code: '## Struktur\nsrc/\n  api/          # API-klient og service-funktioner\n  components/   # React-komponenter\n  hooks/        # Custom hooks\n  pages/        # Side-komponenter (routes)\n  types/        # TypeScript interfaces og typer\n  utils/        # Hjælpefunktioner' },
-              { title: '7. Målgruppe og tone (vigtigt for alle!)', code: '## Målgruppe og Tone\n- Primær bruger: Konferencevært ved check-in-skranken (ikke-teknisk)\n- Sekundær bruger: Deltager der tjekker sig selv ind\n- Sprog: Dansk, uformelt men professionelt\n- UI-tekster: Korte, handlingsorienterede — "Tjek ind" ikke "Submit"\n- Fejlbeskeder: Venlige og hjælpsomme — "Vi kan ikke finde den billet" ikke "Error 404"' },
-              { title: '8. Designprincipper', code: '## Design\n- Designsystem: Shadcn/UI med vores custom theme\n- Responsivt: Mobile-first — check-in sker ofte på tablet/mobil\n- Tilgængelighed: WCAG 2.1 AA som minimum\n- Farver: Brug ALDRIG farve som eneste indikator (husk farveblinde)' },
+              { title: '1. Projektbeskrivelse og formål', code: '# Konference Check-in App\n\nEn webapp til konference check-in bygget under IDA AI Hackathon 2026.\nFormålet er at gøre det nemt for værter at tjekke deltagere ind hurtigt og fejlfrit.\nBackend-API er tilgængeligt på [base-url].' },
+              { title: '2. Målgruppe og brugersituation', code: '## Målgruppe\n- Primær bruger: Konferencevært ved check-in-skranken (ikke-teknisk)\n- Sekundær bruger: Deltager der tjekker sig selv ind\n- Situationen: Travl, stressende, dårlig tid — løsningen skal være lynhurtig\n- Sprog: Dansk, uformelt men professionelt' },
+              { title: '3. Tone og sprog', code: '## Tone\n- UI-tekster: Korte og handlingsorienterede — "Tjek ind" ikke "Submit check-in"\n- Fejlbeskeder: Venlige og hjælpsomme — "Vi kan ikke finde den billet" ikke "Error 404"\n- Skriv ALDRIG engelske knapper eller labels i brugergrænsefladen\n- Undgå teknisk jargon i tekster som brugeren ser' },
+              { title: '4. Produktbeslutninger vi har taget', code: '## Produktbeslutninger\n- Vi bygger til tablet/mobil — ikke desktop\n- Check-in sker via søgning på navn ELLER scanning — begge dele skal virke\n- Vi viser IKKE pris eller betalingsinformation i denne løsning\n- Offline-mode er ikke et krav i dag' },
+              { title: '5. Designprincipper', code: '## Design\n- Mobile-first — check-in sker typisk på en tablet\n- Store touch-targets — mindst 44x44px på interaktive elementer\n- Tilgængelighed: WCAG 2.1 AA som minimum\n- Brug ALDRIG farve som eneste indikator (husk farveblinde)\n- Hold det simpelt: én primær handling pr. skærm' },
+              { title: '6. Tech stack (for udviklere)', code: '## Tech Stack\n- Frontend: React + TypeScript + Vite\n- Styling: Tailwind CSS\n- API: REST via fetch\n- Lav ALDRIG auto-commits — spørg altid først' },
             ].map((section, idx) => (
               <div key={idx} className="border border-[#30363d] bg-[#0d1117] p-3">
                 <p className="text-[#7ee787] text-xs mb-2">{section.title.toUpperCase()}</p>

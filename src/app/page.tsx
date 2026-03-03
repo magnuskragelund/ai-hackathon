@@ -1,4 +1,4 @@
-import { Terminal, Zap, Briefcase, Calendar, ChevronRight, MapPin, Gamepad2, PartyPopper, Download } from 'lucide-react';
+import { Terminal, Zap, Briefcase, Calendar, ChevronRight, MapPin, Gamepad2, PartyPopper, Download, Activity } from 'lucide-react';
 import Link from 'next/link';
 
 const cases = [
@@ -109,7 +109,7 @@ export default function Home() {
             </h2>
           </div>
           <div className="p-6">
-            <Link href="/installation" className="flex items-center justify-between border border-[#30363d] bg-[#161b22] hover:border-[#7ee787] transition-colors p-4 mb-6">
+            <Link href="/installation" className="flex items-center justify-between border border-[#30363d] bg-[#161b22] hover:border-[#7ee787] transition-colors p-4 mb-3">
               <div className="flex items-center gap-3">
                 <Download className="w-5 h-5 text-[#7ee787]" />
                 <div>
@@ -119,6 +119,16 @@ export default function Home() {
               </div>
               <ChevronRight className="w-4 h-4 text-[#8b949e]" />
             </Link>
+            <a href="https://claude.ai/settings/usage" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between border border-[#30363d] bg-[#161b22] hover:border-[#d29922] transition-colors p-4 mb-6">
+              <div className="flex items-center gap-3">
+                <Activity className="w-5 h-5 text-[#d29922]" />
+                <div>
+                  <p className="text-[#c9d1d9] text-sm">Hold øje med dit tokenforbrug</p>
+                  <p className="text-[#8b949e] text-xs mt-0.5">Tjek dit forbrug løbende på claude.ai/settings/usage</p>
+                </div>
+              </div>
+              <ChevronRight className="w-4 h-4 text-[#8b949e]" />
+            </a>
             <div className="space-y-4">
               {[
                 {
