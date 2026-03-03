@@ -385,7 +385,6 @@ export default function NpsCaseDetail() {
       <p className="text-[#8b949e] text-sm">
         API Nøglen virker kun på dagen og slettes i Azure bagefter.
       </p>
-    </div>
   </details>
 </section>
 
