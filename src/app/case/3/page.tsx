@@ -7,7 +7,7 @@ const del2Quests = [
     'Visualisér sentimentfordeling per domæne, segment eller over tid',
     'Fremhæv svar hvor score og sentiment ikke stemmer overens (fx score 8 men negativ kommentar)',
   ]},
-  { id: 'B', task: 'Summary Generator', tag: '[QUICK WIN]', items: [
+  { id: 'B', task: 'AI drevet Summary Generator', tag: '[QUICK WIN]', items: [
     'En knap der genererer en naturlig opsummering af den aktuelle filtrerede visning',
     '"Her er hvad medlemmer siger om forsikring i Q2 2025…"',
   ]},
@@ -30,7 +30,7 @@ const del2Quests = [
     '"Overvej at prioritere mobil-app-performance — 34% af detractor-kommentarer nævner loading-tider"',
     'Knyt anbefalinger til specifik evidens fra besvarelserne',
   ]},
-  { id: 'G', task: 'Det virtuelle IDA-medlem', tag: '[LEGENDARY]', items: [
+  { id: 'G', task: 'AI drevet: Det virtuelle IDA-medlem', tag: '[LEGENDARY]', items: [
     'Byg en AI-agent der repræsenterer den samlede stemme fra medlemmernes NPS-besvarelser',
     'Brug RAG (Retrieval-Augmented Generation) med embeddings og semantisk søgning',
     'Giv agenten en persona: den skal forankre svar i faktisk data og angive datagrundlaget',
@@ -165,7 +165,7 @@ export default function NpsCaseDetail() {
           </p>
         </section>
 
-        {/* Sådan kommer I i gang */}
+        {/* Sådan kommer vi i gang */}
         <section className="mb-10">
           <div className="mb-4">
             <h2 className="text-[#58a6ff] text-lg mb-2">
@@ -191,15 +191,15 @@ export default function NpsCaseDetail() {
               </summary>
               <div className="px-4 pb-4 pt-2 border-t border-[#30363d] space-y-3">
                 <p className="text-[#8b949e] text-sm leading-relaxed">
-                  Brug Claude Code eller et tilsvarende AI-kodningsværktøj som din primære
+                  Brug Claude Code som din primære
                   samarbejdspartner — ikke bare til at generere kode, men til at drive hele
                   processen fremad.
                 </p>
                 <ul className="space-y-2">
                   {[
-                    { label: 'Indlæs og forstå dataen', desc: 'Giv agenten CSV-filen og bed den analysere strukturen og foreslå hvad der kan bygges.' },
-                    { label: 'Byg applikationen', desc: 'Lad agenten skrive selve koden. Beskriv hvad du vil opnå, ikke hvordan.' },
-                    { label: 'Brug Claude API til indsigter', desc: 'Lad AI\'en opsummere, kategorisere og trække mønstre ud af tekstbesvarelserne.' },
+                    { label: 'Indlæs og forstå dataen', desc: 'Giv Claude Code CSV-filen og bed den analysere strukturen og bed den lægge en plan for del 1 af opgaven. .' },
+                    { label: 'Byg applikationen', desc: 'Lad Claude skrive selve koden. Beskriv hvad du vil opnå, ikke hvordan.' },
+                    { label: 'Brug AI til indsigter', desc: 'Vælger I at løse nogle af de opgaver, der kræver AI (Summary Generator, Det virtuelle IDA-medlem eller AI-drevet sentimentanalyse) kan I bruge OpenAIs GPT-4.1 via Azure. ' },
                     { label: 'Generér test-cases og dokumentation', desc: 'Bed agenten om at skrive tests og dokumentere løsningen undervejs.' },
                   ].map((item, idx) => (
                     <li key={idx} className="text-sm">
