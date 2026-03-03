@@ -345,13 +345,15 @@ export default function NpsCaseDetail() {
       <section className="max-w-4xl mx-auto px-6 pb-8">
   <div className="mb-4">
     <h2 className="text-[#58a6ff] text-lg mb-2">
-      <span className="text-[#8b949e]">~/</span>opsætning-azure-openai
+      <span className="text-[#8b949e]">~/</span>Opsætning-azure-openai
     </h2>
     <div className="h-px bg-[#30363d]"></div>
   </div>
 
   <p className="text-[#8b949e] text-sm mb-4">
-    Kun nødvendigt hvis I vælger en opgave der kræver AI (sentiment, summary, RAG osv.)
+    Kun nødvendigt hvis I vælger en opgave der kræver AI (sentiment, summary, RAG osv.) 
+    Claude code kan skrive koden men skal bruge nogle Azure OpenAI variable, som giver adgang til vores AI Azure modeller. 
+    API nøgle og endpoint udleveres på dagen. Tag fat i Sammy.
   </p>
 
   <details className="border border-[#30363d] bg-[#161b22] group">
@@ -381,7 +383,7 @@ export default function NpsCaseDetail() {
             {[
               { field: 'Endpoint', value: 'https://xxx.openai.azure.com/' },
               { field: 'API version', value: '2024-12-01-preview' },
-              { field: 'Chat-model', value: 'gpt-4.1' },
+              { field: 'GPT-model', value: 'gpt-4.1' },
               { field: 'Embedding-model', value: 'text-embedding-3-large' },
             ].map((row, idx) => (
               <tr key={idx} className="border-b border-[#30363d] last:border-0">
