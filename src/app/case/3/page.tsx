@@ -345,7 +345,7 @@ export default function NpsCaseDetail() {
       <section className="max-w-4xl mx-auto px-6 pb-8">
   <div className="mb-4">
     <h2 className="text-[#58a6ff] text-lg mb-2">
-      <span className="text-[#8b949e]">~/</span>Opsætning-azure-openai
+      <span className="text-[#8b949e]">~/</span>Opsætning til AI opgaverne
     </h2>
     <div className="h-px bg-[#30363d]"></div>
   </div>
@@ -363,18 +363,6 @@ export default function NpsCaseDetail() {
       <span className="text-[#8b949e] text-sm group-open:hidden">+ fold ud</span>
       <span className="text-[#8b949e] text-sm hidden group-open:inline">− fold ind</span>
     </summary>
-    <div className="px-4 pb-4 pt-2 border-t border-[#30363d] space-y-3">
-      <p className="text-[#8b949e] text-sm leading-relaxed">
-        Sæt API-nøglen som miljøvariabel i jeres terminal:
-      </p>
-
-      <div className="border border-[#30363d] bg-[#0d1117] p-3 text-sm font-mono space-y-2">
-        <p className="text-[#8b949e]"># Mac/Linux</p>
-        <p className="text-[#c9d1d9]">export AZURE_OPENAI_API_KEY=&quot;nøgle-udleveres-på-dagen&quot;</p>
-        <p className="text-[#8b949e] mt-2"># Windows (PowerShell)</p>
-        <p className="text-[#c9d1d9]">$env:AZURE_OPENAI_API_KEY=&quot;nøgle-udleveres-på-dagen&quot;</p>
-      </div>
-
       <div className="border border-[#30363d] bg-[#0d1117] overflow-x-auto">
         <table className="w-full text-sm">
           <tbody>
@@ -383,6 +371,7 @@ export default function NpsCaseDetail() {
               { field: 'API version', value: '2024-12-01-preview' },
               { field: 'GPT-model', value: 'gpt-4.1' },
               { field: 'Embedding-model', value: 'text-embedding-3-large' },
+              { field: 'API-key', value: 'Udleveres på dagen' },
             ].map((row, idx) => (
               <tr key={idx} className="border-b border-[#30363d] last:border-0">
                 <td className="p-3 text-[#7ee787]">{row.field}</td>
@@ -394,7 +383,7 @@ export default function NpsCaseDetail() {
       </div>
 
       <p className="text-[#8b949e] text-sm">
-        Nøglen gælder kun på dagen og slettes i Azure bagefter.
+        API Nøglen virker kun på dagen og slettes i Azure bagefter.
       </p>
     </div>
   </details>
